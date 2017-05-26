@@ -8,16 +8,16 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CustomAtribute
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:37:54.389Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:46:21.112Z")
 public class CustomAtribute {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("homePage")
-  private String homePage = null;
+  @SerializedName("type")
+  private Integer type = null;
 
-  @SerializedName("phone")
-  private String phone = null;
+  @SerializedName("value")
+  private String value = null;
 
   public CustomAtribute name(String name) {
     this.name = name;
@@ -37,40 +37,40 @@ public class CustomAtribute {
     this.name = name;
   }
 
-  public CustomAtribute homePage(String homePage) {
-    this.homePage = homePage;
+  public CustomAtribute type(Integer type) {
+    this.type = type;
     return this;
   }
 
    /**
-   * Get homePage
-   * @return homePage
+   * Allowable values are= 1 = string, 2 = integer, 3 = double, 4 = date, 5 = boolean, 6 = currency 
+   * @return type
   **/
-  @ApiModelProperty(example = "https://www.acme-corp.com", value = "")
-  public String getHomePage() {
-    return homePage;
+  @ApiModelProperty(example = "1", value = "Allowable values are= 1 = string, 2 = integer, 3 = double, 4 = date, 5 = boolean, 6 = currency ")
+  public Integer getType() {
+    return type;
   }
 
-  public void setHomePage(String homePage) {
-    this.homePage = homePage;
+  public void setType(Integer type) {
+    this.type = type;
   }
 
-  public CustomAtribute phone(String phone) {
-    this.phone = phone;
+  public CustomAtribute value(String value) {
+    this.value = value;
     return this;
   }
 
    /**
-   * Get phone
-   * @return phone
+   * The value of the attribute
+   * @return value
   **/
-  @ApiModelProperty(example = "408-867-5309", value = "")
-  public String getPhone() {
-    return phone;
+  @ApiModelProperty(example = "408-867-5309&quot;", value = "The value of the attribute")
+  public String getValue() {
+    return value;
   }
 
-  public void setPhone(String phone) {
-    this.phone = phone;
+  public void setValue(String value) {
+    this.value = value;
   }
 
 
@@ -84,13 +84,13 @@ public class CustomAtribute {
     }
     CustomAtribute customAtribute = (CustomAtribute) o;
     return Objects.equals(this.name, customAtribute.name) &&
-        Objects.equals(this.homePage, customAtribute.homePage) &&
-        Objects.equals(this.phone, customAtribute.phone);
+        Objects.equals(this.type, customAtribute.type) &&
+        Objects.equals(this.value, customAtribute.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, homePage, phone);
+    return Objects.hash(name, type, value);
   }
 
 
@@ -100,8 +100,8 @@ public class CustomAtribute {
     sb.append("class CustomAtribute {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    homePage: ").append(toIndentedString(homePage)).append("\n");
-    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

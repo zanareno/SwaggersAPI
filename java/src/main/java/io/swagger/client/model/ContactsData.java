@@ -5,13 +5,12 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
-import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.NameSchema;
 
 /**
  * ContactsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:37:54.389Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:46:21.112Z")
 public class ContactsData {
   @SerializedName("customerIndex")
   private String customerIndex = null;
@@ -22,14 +21,17 @@ public class ContactsData {
   @SerializedName("contactsName")
   private NameSchema contactsName = null;
 
-  @SerializedName("consumirId")
-  private String consumirId = null;
+  @SerializedName("consumerId")
+  private String consumerId = null;
 
-  @SerializedName("phoneNumberBusiness")
-  private String phoneNumberBusiness = null;
+  @SerializedName("consumerType")
+  private String consumerType = null;
 
   @SerializedName("phoneNumberHome")
   private String phoneNumberHome = null;
+
+  @SerializedName("phoneNumberBusiness")
+  private String phoneNumberBusiness = null;
 
   @SerializedName("phoneNumberFax")
   private String phoneNumberFax = null;
@@ -51,9 +53,6 @@ public class ContactsData {
 
   @SerializedName("groupCode")
   private String groupCode = null;
-
-  @SerializedName("contactAttribute")
-  private CustomAtribute contactAttribute = null;
 
   public ContactsData customerIndex(String customerIndex) {
     this.customerIndex = customerIndex;
@@ -109,40 +108,40 @@ public class ContactsData {
     this.contactsName = contactsName;
   }
 
-  public ContactsData consumirId(String consumirId) {
-    this.consumirId = consumirId;
+  public ContactsData consumerId(String consumerId) {
+    this.consumerId = consumerId;
     return this;
   }
 
    /**
-   * Get consumirId
-   * @return consumirId
+   * Generic identification number, such as passport or driving licence number.
+   * @return consumerId
   **/
-  @ApiModelProperty(example = "Generic identification number, such as passport or driving licence number.", value = "")
-  public String getConsumirId() {
-    return consumirId;
+  @ApiModelProperty(example = "GB79416235897", value = "Generic identification number, such as passport or driving licence number.")
+  public String getConsumerId() {
+    return consumerId;
   }
 
-  public void setConsumirId(String consumirId) {
-    this.consumirId = consumirId;
+  public void setConsumerId(String consumerId) {
+    this.consumerId = consumerId;
   }
 
-  public ContactsData phoneNumberBusiness(String phoneNumberBusiness) {
-    this.phoneNumberBusiness = phoneNumberBusiness;
+  public ContactsData consumerType(String consumerType) {
+    this.consumerType = consumerType;
     return this;
   }
 
    /**
-   * Get phoneNumberBusiness
-   * @return phoneNumberBusiness
+   * E.g. Passport, SocialSecurityNumber
+   * @return consumerType
   **/
-  @ApiModelProperty(example = "2.890726E9", value = "")
-  public String getPhoneNumberBusiness() {
-    return phoneNumberBusiness;
+  @ApiModelProperty(example = "Passport", value = "E.g. Passport, SocialSecurityNumber")
+  public String getConsumerType() {
+    return consumerType;
   }
 
-  public void setPhoneNumberBusiness(String phoneNumberBusiness) {
-    this.phoneNumberBusiness = phoneNumberBusiness;
+  public void setConsumerType(String consumerType) {
+    this.consumerType = consumerType;
   }
 
   public ContactsData phoneNumberHome(String phoneNumberHome) {
@@ -161,6 +160,24 @@ public class ContactsData {
 
   public void setPhoneNumberHome(String phoneNumberHome) {
     this.phoneNumberHome = phoneNumberHome;
+  }
+
+  public ContactsData phoneNumberBusiness(String phoneNumberBusiness) {
+    this.phoneNumberBusiness = phoneNumberBusiness;
+    return this;
+  }
+
+   /**
+   * Get phoneNumberBusiness
+   * @return phoneNumberBusiness
+  **/
+  @ApiModelProperty(example = "2.890726E9", value = "")
+  public String getPhoneNumberBusiness() {
+    return phoneNumberBusiness;
+  }
+
+  public void setPhoneNumberBusiness(String phoneNumberBusiness) {
+    this.phoneNumberBusiness = phoneNumberBusiness;
   }
 
   public ContactsData phoneNumberFax(String phoneNumberFax) {
@@ -208,7 +225,7 @@ public class ContactsData {
    * Get emailAddress1
    * @return emailAddress1
   **/
-  @ApiModelProperty(example = "Person is an MP", value = "")
+  @ApiModelProperty(example = "me@here.com", value = "")
   public String getEmailAddress1() {
     return emailAddress1;
   }
@@ -226,7 +243,7 @@ public class ContactsData {
    * Get emailAddress2
    * @return emailAddress2
   **/
-  @ApiModelProperty(example = "Person is an MP", value = "")
+  @ApiModelProperty(example = "me2@here.com", value = "")
   public String getEmailAddress2() {
     return emailAddress2;
   }
@@ -289,24 +306,6 @@ public class ContactsData {
     this.groupCode = groupCode;
   }
 
-  public ContactsData contactAttribute(CustomAtribute contactAttribute) {
-    this.contactAttribute = contactAttribute;
-    return this;
-  }
-
-   /**
-   * Get contactAttribute
-   * @return contactAttribute
-  **/
-  @ApiModelProperty(value = "")
-  public CustomAtribute getContactAttribute() {
-    return contactAttribute;
-  }
-
-  public void setContactAttribute(CustomAtribute contactAttribute) {
-    this.contactAttribute = contactAttribute;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -320,22 +319,22 @@ public class ContactsData {
     return Objects.equals(this.customerIndex, contactsData.customerIndex) &&
         Objects.equals(this.clientCustomerUid, contactsData.clientCustomerUid) &&
         Objects.equals(this.contactsName, contactsData.contactsName) &&
-        Objects.equals(this.consumirId, contactsData.consumirId) &&
-        Objects.equals(this.phoneNumberBusiness, contactsData.phoneNumberBusiness) &&
+        Objects.equals(this.consumerId, contactsData.consumerId) &&
+        Objects.equals(this.consumerType, contactsData.consumerType) &&
         Objects.equals(this.phoneNumberHome, contactsData.phoneNumberHome) &&
+        Objects.equals(this.phoneNumberBusiness, contactsData.phoneNumberBusiness) &&
         Objects.equals(this.phoneNumberFax, contactsData.phoneNumberFax) &&
         Objects.equals(this.phoneNumberMobile, contactsData.phoneNumberMobile) &&
         Objects.equals(this.emailAddress1, contactsData.emailAddress1) &&
         Objects.equals(this.emailAddress2, contactsData.emailAddress2) &&
         Objects.equals(this.customerImportanceReason, contactsData.customerImportanceReason) &&
         Objects.equals(this.correspondenceAddress, contactsData.correspondenceAddress) &&
-        Objects.equals(this.groupCode, contactsData.groupCode) &&
-        Objects.equals(this.contactAttribute, contactsData.contactAttribute);
+        Objects.equals(this.groupCode, contactsData.groupCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerIndex, clientCustomerUid, contactsName, consumirId, phoneNumberBusiness, phoneNumberHome, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode, contactAttribute);
+    return Objects.hash(customerIndex, clientCustomerUid, contactsName, consumerId, consumerType, phoneNumberHome, phoneNumberBusiness, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode);
   }
 
 
@@ -347,9 +346,10 @@ public class ContactsData {
     sb.append("    customerIndex: ").append(toIndentedString(customerIndex)).append("\n");
     sb.append("    clientCustomerUid: ").append(toIndentedString(clientCustomerUid)).append("\n");
     sb.append("    contactsName: ").append(toIndentedString(contactsName)).append("\n");
-    sb.append("    consumirId: ").append(toIndentedString(consumirId)).append("\n");
-    sb.append("    phoneNumberBusiness: ").append(toIndentedString(phoneNumberBusiness)).append("\n");
+    sb.append("    consumerId: ").append(toIndentedString(consumerId)).append("\n");
+    sb.append("    consumerType: ").append(toIndentedString(consumerType)).append("\n");
     sb.append("    phoneNumberHome: ").append(toIndentedString(phoneNumberHome)).append("\n");
+    sb.append("    phoneNumberBusiness: ").append(toIndentedString(phoneNumberBusiness)).append("\n");
     sb.append("    phoneNumberFax: ").append(toIndentedString(phoneNumberFax)).append("\n");
     sb.append("    phoneNumberMobile: ").append(toIndentedString(phoneNumberMobile)).append("\n");
     sb.append("    emailAddress1: ").append(toIndentedString(emailAddress1)).append("\n");
@@ -357,7 +357,6 @@ public class ContactsData {
     sb.append("    customerImportanceReason: ").append(toIndentedString(customerImportanceReason)).append("\n");
     sb.append("    correspondenceAddress: ").append(toIndentedString(correspondenceAddress)).append("\n");
     sb.append("    groupCode: ").append(toIndentedString(groupCode)).append("\n");
-    sb.append("    contactAttribute: ").append(toIndentedString(contactAttribute)).append("\n");
     sb.append("}");
     return sb.toString();
   }
