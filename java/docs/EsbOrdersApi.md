@@ -161,7 +161,7 @@ A contact is created on Cerillion for each element present in the submission.
 
 
 EsbOrdersApi apiInstance = new EsbOrdersApi();
-ContactsData contactsData = new ContactsData(); // ContactsData | Detailed Information of contact
+ContactsData contactsData = new ContactsData(); // ContactsData | Detailed Information of contact - Notes:   - At least one of these four Phone Number fields must be provided. 
 try {
     apiInstance.newContact(contactsData);
 } catch (ApiException e) {
@@ -174,7 +174,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contactsData** | [**ContactsData**](ContactsData.md)| Detailed Information of contact | [optional]
+ **contactsData** | [**ContactsData**](ContactsData.md)| Detailed Information of contact - Notes:   - At least one of these four Phone Number fields must be provided.  | [optional]
 
 ### Return type
 

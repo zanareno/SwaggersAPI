@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **clientCustomerUid** | **String** |  | 
 **customersName** | [**NameSchema**](NameSchema.md) |  | 
 **customerTypeCode** | **String** |  | 
-**customerCategoryCode** | **String** |  | 
-**customerClassCode** | **String** |  | 
+**customerCategoryCode** | **String** | CCLSCATE - Cerillion Ref data | 
+**customerClassCode** | **String** | CCLSCLAS - Cerillion Ref data | 
 **customerImportanceCode** | **String** |  |  [optional]
 **customerImportanceReason** | **String** |  |  [optional]
 **correspondenceAddress** | [**Address**](Address.md) |  | 

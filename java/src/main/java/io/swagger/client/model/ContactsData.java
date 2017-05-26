@@ -5,12 +5,13 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
+import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.NameSchema;
 
 /**
  * ContactsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:46:21.112Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T12:09:43.399Z")
 public class ContactsData {
   @SerializedName("customerIndex")
   private String customerIndex = null;
@@ -53,6 +54,9 @@ public class ContactsData {
 
   @SerializedName("groupCode")
   private String groupCode = null;
+
+  @SerializedName("contactAttribute")
+  private CustomAtribute contactAttribute = null;
 
   public ContactsData customerIndex(String customerIndex) {
     this.customerIndex = customerIndex;
@@ -306,6 +310,24 @@ public class ContactsData {
     this.groupCode = groupCode;
   }
 
+  public ContactsData contactAttribute(CustomAtribute contactAttribute) {
+    this.contactAttribute = contactAttribute;
+    return this;
+  }
+
+   /**
+   * Get contactAttribute
+   * @return contactAttribute
+  **/
+  @ApiModelProperty(value = "")
+  public CustomAtribute getContactAttribute() {
+    return contactAttribute;
+  }
+
+  public void setContactAttribute(CustomAtribute contactAttribute) {
+    this.contactAttribute = contactAttribute;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -329,12 +351,13 @@ public class ContactsData {
         Objects.equals(this.emailAddress2, contactsData.emailAddress2) &&
         Objects.equals(this.customerImportanceReason, contactsData.customerImportanceReason) &&
         Objects.equals(this.correspondenceAddress, contactsData.correspondenceAddress) &&
-        Objects.equals(this.groupCode, contactsData.groupCode);
+        Objects.equals(this.groupCode, contactsData.groupCode) &&
+        Objects.equals(this.contactAttribute, contactsData.contactAttribute);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerIndex, clientCustomerUid, contactsName, consumerId, consumerType, phoneNumberHome, phoneNumberBusiness, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode);
+    return Objects.hash(customerIndex, clientCustomerUid, contactsName, consumerId, consumerType, phoneNumberHome, phoneNumberBusiness, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode, contactAttribute);
   }
 
 
@@ -357,6 +380,7 @@ public class ContactsData {
     sb.append("    customerImportanceReason: ").append(toIndentedString(customerImportanceReason)).append("\n");
     sb.append("    correspondenceAddress: ").append(toIndentedString(correspondenceAddress)).append("\n");
     sb.append("    groupCode: ").append(toIndentedString(groupCode)).append("\n");
+    sb.append("    contactAttribute: ").append(toIndentedString(contactAttribute)).append("\n");
     sb.append("}");
     return sb.toString();
   }

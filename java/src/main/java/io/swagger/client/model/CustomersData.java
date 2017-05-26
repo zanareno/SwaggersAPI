@@ -11,7 +11,7 @@ import io.swagger.client.model.NameSchema;
 /**
  * CustomersData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:46:21.112Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T12:09:43.399Z")
 public class CustomersData {
   @SerializedName("customerIndex")
   private String customerIndex = null;
@@ -121,10 +121,10 @@ public class CustomersData {
   }
 
    /**
-   * Get customerCategoryCode
+   * CCLSCATE - Cerillion Ref data
    * @return customerCategoryCode
   **/
-  @ApiModelProperty(example = "CCLSCATE - Cerillion Ref data", required = true, value = "")
+  @ApiModelProperty(example = "STANDARD", required = true, value = "CCLSCATE - Cerillion Ref data")
   public String getCustomerCategoryCode() {
     return customerCategoryCode;
   }
@@ -139,10 +139,10 @@ public class CustomersData {
   }
 
    /**
-   * Get customerClassCode
+   * CCLSCLAS - Cerillion Ref data
    * @return customerClassCode
   **/
-  @ApiModelProperty(example = "CCLSCLAS - Cerillion Ref data", required = true, value = "")
+  @ApiModelProperty(example = "STANDARD", required = true, value = "CCLSCLAS - Cerillion Ref data")
   public String getCustomerClassCode() {
     return customerClassCode;
   }

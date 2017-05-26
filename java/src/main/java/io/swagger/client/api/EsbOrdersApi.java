@@ -381,7 +381,7 @@ public class EsbOrdersApi {
     /**
      * Creates new contact
      * A contact is created on Cerillion for each element present in the submission. 
-     * @param contactsData Detailed Information of contact (optional)
+     * @param contactsData Detailed Information of contact - Notes:   - At least one of these four Phone Number fields must be provided.  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void newContact(ContactsData contactsData) throws ApiException {
@@ -391,7 +391,7 @@ public class EsbOrdersApi {
     /**
      * Creates new contact
      * A contact is created on Cerillion for each element present in the submission. 
-     * @param contactsData Detailed Information of contact (optional)
+     * @param contactsData Detailed Information of contact - Notes:   - At least one of these four Phone Number fields must be provided.  (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -403,7 +403,7 @@ public class EsbOrdersApi {
     /**
      * Creates new contact (asynchronously)
      * A contact is created on Cerillion for each element present in the submission. 
-     * @param contactsData Detailed Information of contact (optional)
+     * @param contactsData Detailed Information of contact - Notes:   - At least one of these four Phone Number fields must be provided.  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

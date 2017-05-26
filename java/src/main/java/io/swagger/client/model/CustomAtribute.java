@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CustomAtribute
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T11:46:21.112Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T12:09:43.399Z")
 public class CustomAtribute {
   @SerializedName("name")
   private String name = null;
@@ -46,7 +46,7 @@ public class CustomAtribute {
    * Allowable values are= 1 = string, 2 = integer, 3 = double, 4 = date, 5 = boolean, 6 = currency 
    * @return type
   **/
-  @ApiModelProperty(example = "1", value = "Allowable values are= 1 = string, 2 = integer, 3 = double, 4 = date, 5 = boolean, 6 = currency ")
+  @ApiModelProperty(example = "1", required = true, value = "Allowable values are= 1 = string, 2 = integer, 3 = double, 4 = date, 5 = boolean, 6 = currency ")
   public Integer getType() {
     return type;
   }
@@ -64,7 +64,7 @@ public class CustomAtribute {
    * The value of the attribute
    * @return value
   **/
-  @ApiModelProperty(example = "408-867-5309&quot;", value = "The value of the attribute")
+  @ApiModelProperty(example = "408-867-5309&quot;", required = true, value = "The value of the attribute")
   public String getValue() {
     return value;
   }
