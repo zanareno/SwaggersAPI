@@ -71,7 +71,7 @@ public class EsbOrdersApiExample {
     public static void main(String[] args) {
         
         EsbOrdersApi apiInstance = new EsbOrdersApi();
-        Manufacturer inventoryItem = new Manufacturer(); // Manufacturer | Inventory item to add
+        CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
         try {
             apiInstance.changeMsisdn(inventoryItem);
         } catch (ApiException e) {
@@ -104,8 +104,8 @@ Class | Method | HTTP request | Description
  - [Address](docs/Address.md)
  - [ContactAssociation](docs/ContactAssociation.md)
  - [ContactsData](docs/ContactsData.md)
+ - [CustomAtribute](docs/CustomAtribute.md)
  - [CustomersData](docs/CustomersData.md)
- - [Manufacturer](docs/Manufacturer.md)
  - [NameSchema](docs/NameSchema.md)
 
 

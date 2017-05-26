@@ -3,8 +3,8 @@ package io.swagger.client.api;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.AccountsData;
 import io.swagger.client.model.ContactsData;
+import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.CustomersData;
-import io.swagger.client.model.Manufacturer;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class EsbOrdersApiTest {
      */
     @Test
     public void changeMsisdnTest() throws ApiException {
-        Manufacturer inventoryItem = null;
+        CustomAtribute inventoryItem = null;
         // api.changeMsisdn(inventoryItem);
 
         // TODO: test validations
@@ -62,7 +62,7 @@ public class EsbOrdersApiTest {
      */
     @Test
     public void newAccountRelationshipTest() throws ApiException {
-        Manufacturer inventoryItem = null;
+        CustomAtribute inventoryItem = null;
         // api.newAccountRelationship(inventoryItem);
 
         // TODO: test validations
@@ -110,7 +110,7 @@ public class EsbOrdersApiTest {
      */
     @Test
     public void provideOrderTest() throws ApiException {
-        Manufacturer inventoryItem = null;
+        CustomAtribute inventoryItem = null;
         // api.provideOrder(inventoryItem);
 
         // TODO: test validations
@@ -126,7 +126,7 @@ public class EsbOrdersApiTest {
      */
     @Test
     public void terminateAditionalServiceTest() throws ApiException {
-        Manufacturer inventoryItem = null;
+        CustomAtribute inventoryItem = null;
         // api.terminateAditionalService(inventoryItem);
 
         // TODO: test validations

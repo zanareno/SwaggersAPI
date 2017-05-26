@@ -29,7 +29,7 @@ Adds an item to the system
 
 
 EsbOrdersApi apiInstance = new EsbOrdersApi();
-Manufacturer inventoryItem = new Manufacturer(); // Manufacturer | Inventory item to add
+CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
 try {
     apiInstance.changeMsisdn(inventoryItem);
 } catch (ApiException e) {
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inventoryItem** | [**Manufacturer**](Manufacturer.md)| Inventory item to add | [optional]
+ **inventoryItem** | [**CustomAtribute**](CustomAtribute.md)| Inventory item to add | [optional]
 
 ### Return type
 
@@ -117,7 +117,7 @@ Adds an item to the system
 
 
 EsbOrdersApi apiInstance = new EsbOrdersApi();
-Manufacturer inventoryItem = new Manufacturer(); // Manufacturer | Inventory item to add
+CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
 try {
     apiInstance.newAccountRelationship(inventoryItem);
 } catch (ApiException e) {
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inventoryItem** | [**Manufacturer**](Manufacturer.md)| Inventory item to add | [optional]
+ **inventoryItem** | [**CustomAtribute**](CustomAtribute.md)| Inventory item to add | [optional]
 
 ### Return type
 
@@ -249,7 +249,7 @@ Adds an item to the system
 
 
 EsbOrdersApi apiInstance = new EsbOrdersApi();
-Manufacturer inventoryItem = new Manufacturer(); // Manufacturer | Inventory item to add
+CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
 try {
     apiInstance.provideOrder(inventoryItem);
 } catch (ApiException e) {
@@ -262,7 +262,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inventoryItem** | [**Manufacturer**](Manufacturer.md)| Inventory item to add | [optional]
+ **inventoryItem** | [**CustomAtribute**](CustomAtribute.md)| Inventory item to add | [optional]
 
 ### Return type
 
@@ -293,7 +293,7 @@ Adds an item to the system
 
 
 EsbOrdersApi apiInstance = new EsbOrdersApi();
-Manufacturer inventoryItem = new Manufacturer(); // Manufacturer | Inventory item to add
+CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
 try {
     apiInstance.terminateAditionalService(inventoryItem);
 } catch (ApiException e) {
@@ -306,7 +306,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inventoryItem** | [**Manufacturer**](Manufacturer.md)| Inventory item to add | [optional]
+ **inventoryItem** | [**CustomAtribute**](CustomAtribute.md)| Inventory item to add | [optional]
 
 ### Return type
 

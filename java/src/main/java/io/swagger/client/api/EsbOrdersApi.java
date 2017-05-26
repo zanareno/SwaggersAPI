@@ -17,8 +17,8 @@ import java.io.IOException;
 
 import io.swagger.client.model.AccountsData;
 import io.swagger.client.model.ContactsData;
+import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.CustomersData;
-import io.swagger.client.model.Manufacturer;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class EsbOrdersApi {
     }
 
     /* Build call for changeMsisdn */
-    private com.squareup.okhttp.Call changeMsisdnCall(Manufacturer inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call changeMsisdnCall(CustomAtribute inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inventoryItem;
         
 
@@ -93,7 +93,7 @@ public class EsbOrdersApi {
      * @param inventoryItem Inventory item to add (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void changeMsisdn(Manufacturer inventoryItem) throws ApiException {
+    public void changeMsisdn(CustomAtribute inventoryItem) throws ApiException {
         changeMsisdnWithHttpInfo(inventoryItem);
     }
 
@@ -104,7 +104,7 @@ public class EsbOrdersApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> changeMsisdnWithHttpInfo(Manufacturer inventoryItem) throws ApiException {
+    public ApiResponse<Void> changeMsisdnWithHttpInfo(CustomAtribute inventoryItem) throws ApiException {
         com.squareup.okhttp.Call call = changeMsisdnCall(inventoryItem, null, null);
         return apiClient.execute(call);
     }
@@ -117,7 +117,7 @@ public class EsbOrdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call changeMsisdnAsync(Manufacturer inventoryItem, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call changeMsisdnAsync(CustomAtribute inventoryItem, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -240,7 +240,7 @@ public class EsbOrdersApi {
         return call;
     }
     /* Build call for newAccountRelationship */
-    private com.squareup.okhttp.Call newAccountRelationshipCall(Manufacturer inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call newAccountRelationshipCall(CustomAtribute inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inventoryItem;
         
 
@@ -287,7 +287,7 @@ public class EsbOrdersApi {
      * @param inventoryItem Inventory item to add (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void newAccountRelationship(Manufacturer inventoryItem) throws ApiException {
+    public void newAccountRelationship(CustomAtribute inventoryItem) throws ApiException {
         newAccountRelationshipWithHttpInfo(inventoryItem);
     }
 
@@ -298,7 +298,7 @@ public class EsbOrdersApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> newAccountRelationshipWithHttpInfo(Manufacturer inventoryItem) throws ApiException {
+    public ApiResponse<Void> newAccountRelationshipWithHttpInfo(CustomAtribute inventoryItem) throws ApiException {
         com.squareup.okhttp.Call call = newAccountRelationshipCall(inventoryItem, null, null);
         return apiClient.execute(call);
     }
@@ -311,7 +311,7 @@ public class EsbOrdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call newAccountRelationshipAsync(Manufacturer inventoryItem, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call newAccountRelationshipAsync(CustomAtribute inventoryItem, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -531,7 +531,7 @@ public class EsbOrdersApi {
         return call;
     }
     /* Build call for provideOrder */
-    private com.squareup.okhttp.Call provideOrderCall(Manufacturer inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call provideOrderCall(CustomAtribute inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inventoryItem;
         
 
@@ -578,7 +578,7 @@ public class EsbOrdersApi {
      * @param inventoryItem Inventory item to add (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void provideOrder(Manufacturer inventoryItem) throws ApiException {
+    public void provideOrder(CustomAtribute inventoryItem) throws ApiException {
         provideOrderWithHttpInfo(inventoryItem);
     }
 
@@ -589,7 +589,7 @@ public class EsbOrdersApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> provideOrderWithHttpInfo(Manufacturer inventoryItem) throws ApiException {
+    public ApiResponse<Void> provideOrderWithHttpInfo(CustomAtribute inventoryItem) throws ApiException {
         com.squareup.okhttp.Call call = provideOrderCall(inventoryItem, null, null);
         return apiClient.execute(call);
     }
@@ -602,7 +602,7 @@ public class EsbOrdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call provideOrderAsync(Manufacturer inventoryItem, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call provideOrderAsync(CustomAtribute inventoryItem, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -628,7 +628,7 @@ public class EsbOrdersApi {
         return call;
     }
     /* Build call for terminateAditionalService */
-    private com.squareup.okhttp.Call terminateAditionalServiceCall(Manufacturer inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call terminateAditionalServiceCall(CustomAtribute inventoryItem, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inventoryItem;
         
 
@@ -675,7 +675,7 @@ public class EsbOrdersApi {
      * @param inventoryItem Inventory item to add (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void terminateAditionalService(Manufacturer inventoryItem) throws ApiException {
+    public void terminateAditionalService(CustomAtribute inventoryItem) throws ApiException {
         terminateAditionalServiceWithHttpInfo(inventoryItem);
     }
 
@@ -686,7 +686,7 @@ public class EsbOrdersApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> terminateAditionalServiceWithHttpInfo(Manufacturer inventoryItem) throws ApiException {
+    public ApiResponse<Void> terminateAditionalServiceWithHttpInfo(CustomAtribute inventoryItem) throws ApiException {
         com.squareup.okhttp.Call call = terminateAditionalServiceCall(inventoryItem, null, null);
         return apiClient.execute(call);
     }
@@ -699,7 +699,7 @@ public class EsbOrdersApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call terminateAditionalServiceAsync(Manufacturer inventoryItem, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call terminateAditionalServiceAsync(CustomAtribute inventoryItem, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
