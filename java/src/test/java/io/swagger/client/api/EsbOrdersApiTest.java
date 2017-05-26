@@ -3,7 +3,6 @@ package io.swagger.client.api;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.AccountsData;
 import io.swagger.client.model.ContactsData;
-import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.CustomersData;
 import org.junit.Test;
 
@@ -21,49 +20,17 @@ public class EsbOrdersApiTest {
 
     
     /**
-     * adds an inventory item
+     * Creates new account
      *
-     * Adds an item to the system
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void changeMsisdnTest() throws ApiException {
-        CustomAtribute inventoryItem = null;
-        // api.changeMsisdn(inventoryItem);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * adds an inventory item
-     *
-     * Adds an item to the system
+     * An account is created on Cerillion for each element present in the submission.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void newAccountTest() throws ApiException {
-        AccountsData inventoryItem = null;
-        // api.newAccount(inventoryItem);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * adds an inventory item
-     *
-     * Adds an item to the system
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void newAccountRelationshipTest() throws ApiException {
-        CustomAtribute inventoryItem = null;
-        // api.newAccountRelationship(inventoryItem);
+        AccountsData accountData = null;
+        // api.newAccount(accountData);
 
         // TODO: test validations
     }
@@ -96,38 +63,6 @@ public class EsbOrdersApiTest {
     public void newCustomerTest() throws ApiException {
         CustomersData customersData = null;
         // api.newCustomer(customersData);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * adds an inventory item
-     *
-     * Adds an item to the system
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void provideOrderTest() throws ApiException {
-        CustomAtribute inventoryItem = null;
-        // api.provideOrder(inventoryItem);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * adds an inventory item
-     *
-     * Adds an item to the system
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void terminateAditionalServiceTest() throws ApiException {
-        CustomAtribute inventoryItem = null;
-        // api.terminateAditionalService(inventoryItem);
 
         // TODO: test validations
     }

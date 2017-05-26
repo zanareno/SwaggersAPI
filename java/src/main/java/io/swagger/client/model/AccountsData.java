@@ -6,12 +6,13 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
 import io.swagger.client.model.ContactAssociation;
+import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.NameSchema;
 
 /**
  * AccountsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T12:09:43.399Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-26T13:51:15.464Z")
 public class AccountsData {
   @SerializedName("accountIndex")
   private String accountIndex = null;
@@ -46,11 +47,53 @@ public class AccountsData {
   @SerializedName("currencyCode")
   private String currencyCode = null;
 
+  @SerializedName("corporateId")
+  private String corporateId = null;
+
+  @SerializedName("corporateIdType")
+  private String corporateIdType = null;
+
+  @SerializedName("billLanguageCode")
+  private String billLanguageCode = null;
+
+  @SerializedName("billMediaCode")
+  private String billMediaCode = null;
+
+  @SerializedName("billToEmailAddress")
+  private String billToEmailAddress = null;
+
+  @SerializedName("billItemisation")
+  private String billItemisation = null;
+
+  @SerializedName("basicCollectionPlanCode")
+  private String basicCollectionPlanCode = null;
+
+  @SerializedName("paymentTerms")
+  private String paymentTerms = null;
+
+  @SerializedName("marketingFlag")
+  private Boolean marketingFlag = null;
+
+  @SerializedName("taxSchemeCode")
+  private String taxSchemeCode = null;
+
+  @SerializedName("taxIdentification")
+  private String taxIdentification = null;
+
+  @SerializedName("faultPriority")
+  private Integer faultPriority = null;
+
+  @SerializedName("billingAddress")
+  private Address billingAddress = null;
+
   @SerializedName("correspondenceAddress")
   private Address correspondenceAddress = null;
 
   @SerializedName("contactAssociation")
   private ContactAssociation contactAssociation = null;
+
+  @SerializedName("contactAttribute")
+  private CustomAtribute contactAttribute = null;
 
   public AccountsData accountIndex(String accountIndex) {
     this.accountIndex = accountIndex;
@@ -166,10 +209,10 @@ public class AccountsData {
   }
 
    /**
-   * The type of account, e.g. BUS, RES
+   * ACC_SOURCE - Cerillion Ref data The type of account, e.g. BUS, RES 
    * @return accountTypeCode
   **/
-  @ApiModelProperty(example = "CCLSCATE - Cerillion Ref data", required = true, value = "The type of account, e.g. BUS, RES")
+  @ApiModelProperty(example = "BUS", required = true, value = "ACC_SOURCE - Cerillion Ref data The type of account, e.g. BUS, RES ")
   public String getAccountTypeCode() {
     return accountTypeCode;
   }
@@ -184,10 +227,10 @@ public class AccountsData {
   }
 
    /**
-   * Get accountCategoryCode
+   * CATEGORY - Cerillion Ref data The account category code, e.g. FI = Business, P1 = Prepay, P3 = Postpay 
    * @return accountCategoryCode
   **/
-  @ApiModelProperty(example = "CCLSCLAS - Cerillion Ref data", required = true, value = "")
+  @ApiModelProperty(example = "P3", required = true, value = "CATEGORY - Cerillion Ref data The account category code, e.g. FI = Business, P1 = Prepay, P3 = Postpay ")
   public String getAccountCategoryCode() {
     return accountCategoryCode;
   }
@@ -202,10 +245,10 @@ public class AccountsData {
   }
 
    /**
-   * Get accountClassificationCode
+   * ACCOUNT - Cerillion Ref data The account classification code,e.g. B1 = B2B Standard, B2 = B2B Pilot, C1 = CRIL Standard, R1 = B2C Standard 
    * @return accountClassificationCode
   **/
-  @ApiModelProperty(example = "Gold", required = true, value = "")
+  @ApiModelProperty(example = "B1", required = true, value = "ACCOUNT - Cerillion Ref data The account classification code,e.g. B1 = B2B Standard, B2 = B2B Pilot, C1 = CRIL Standard, R1 = B2C Standard ")
   public String getAccountClassificationCode() {
     return accountClassificationCode;
   }
@@ -250,6 +293,240 @@ public class AccountsData {
     this.currencyCode = currencyCode;
   }
 
+  public AccountsData corporateId(String corporateId) {
+    this.corporateId = corporateId;
+    return this;
+  }
+
+   /**
+   * The ID of the company specific to the country E.g. Populated with 9 numbers for Poland or 9 characters for Spain 
+   * @return corporateId
+  **/
+  @ApiModelProperty(example = "12345646", value = "The ID of the company specific to the country E.g. Populated with 9 numbers for Poland or 9 characters for Spain ")
+  public String getCorporateId() {
+    return corporateId;
+  }
+
+  public void setCorporateId(String corporateId) {
+    this.corporateId = corporateId;
+  }
+
+  public AccountsData corporateIdType(String corporateIdType) {
+    this.corporateIdType = corporateIdType;
+    return this;
+  }
+
+   /**
+   * The type of the CorporateId E.g. Populated with Regon for Poland or CIF for Spain 
+   * @return corporateIdType
+  **/
+  @ApiModelProperty(example = "Regon", value = "The type of the CorporateId E.g. Populated with Regon for Poland or CIF for Spain ")
+  public String getCorporateIdType() {
+    return corporateIdType;
+  }
+
+  public void setCorporateIdType(String corporateIdType) {
+    this.corporateIdType = corporateIdType;
+  }
+
+  public AccountsData billLanguageCode(String billLanguageCode) {
+    this.billLanguageCode = billLanguageCode;
+    return this;
+  }
+
+   /**
+   * Code of the language in which the account's bills are to be printed language tag language-region format, e.g. en-GB, where language is an ISO 639-1 2 lower case alphabetic character code and region is a country code as defined above. 
+   * @return billLanguageCode
+  **/
+  @ApiModelProperty(example = "en-gb", required = true, value = "Code of the language in which the account's bills are to be printed language tag language-region format, e.g. en-GB, where language is an ISO 639-1 2 lower case alphabetic character code and region is a country code as defined above. ")
+  public String getBillLanguageCode() {
+    return billLanguageCode;
+  }
+
+  public void setBillLanguageCode(String billLanguageCode) {
+    this.billLanguageCode = billLanguageCode;
+  }
+
+  public AccountsData billMediaCode(String billMediaCode) {
+    this.billMediaCode = billMediaCode;
+    return this;
+  }
+
+   /**
+   * Type of media that will be used to produce bill. E.g. PAPER, EMAIL, PAPERMAIL, NOBILL If element is not supplied this will default to EMAIL. 
+   * @return billMediaCode
+  **/
+  @ApiModelProperty(example = "EMAIL", value = "Type of media that will be used to produce bill. E.g. PAPER, EMAIL, PAPERMAIL, NOBILL If element is not supplied this will default to EMAIL. ")
+  public String getBillMediaCode() {
+    return billMediaCode;
+  }
+
+  public void setBillMediaCode(String billMediaCode) {
+    this.billMediaCode = billMediaCode;
+  }
+
+  public AccountsData billToEmailAddress(String billToEmailAddress) {
+    this.billToEmailAddress = billToEmailAddress;
+    return this;
+  }
+
+   /**
+   * [EDEN-3043] The email address for billing purposes 
+   * @return billToEmailAddress
+  **/
+  @ApiModelProperty(example = "bruce.tinsley@asidua.com", value = "[EDEN-3043] The email address for billing purposes ")
+  public String getBillToEmailAddress() {
+    return billToEmailAddress;
+  }
+
+  public void setBillToEmailAddress(String billToEmailAddress) {
+    this.billToEmailAddress = billToEmailAddress;
+  }
+
+  public AccountsData billItemisation(String billItemisation) {
+    this.billItemisation = billItemisation;
+    return this;
+  }
+
+   /**
+   * Bill itemisation. One of= ITEMBOTH, ITEMCSVO or ITEMNONE
+   * @return billItemisation
+  **/
+  @ApiModelProperty(example = "ITEMBOTH", required = true, value = "Bill itemisation. One of= ITEMBOTH, ITEMCSVO or ITEMNONE")
+  public String getBillItemisation() {
+    return billItemisation;
+  }
+
+  public void setBillItemisation(String billItemisation) {
+    this.billItemisation = billItemisation;
+  }
+
+  public AccountsData basicCollectionPlanCode(String basicCollectionPlanCode) {
+    this.basicCollectionPlanCode = basicCollectionPlanCode;
+    return this;
+  }
+
+   /**
+   * The base collection plan for the account, E.g. RES1, BLUE, SME1
+   * @return basicCollectionPlanCode
+  **/
+  @ApiModelProperty(example = "SME1", required = true, value = "The base collection plan for the account, E.g. RES1, BLUE, SME1")
+  public String getBasicCollectionPlanCode() {
+    return basicCollectionPlanCode;
+  }
+
+  public void setBasicCollectionPlanCode(String basicCollectionPlanCode) {
+    this.basicCollectionPlanCode = basicCollectionPlanCode;
+  }
+
+  public AccountsData paymentTerms(String paymentTerms) {
+    this.paymentTerms = paymentTerms;
+    return this;
+  }
+
+   /**
+   * Get paymentTerms
+   * @return paymentTerms
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public String getPaymentTerms() {
+    return paymentTerms;
+  }
+
+  public void setPaymentTerms(String paymentTerms) {
+    this.paymentTerms = paymentTerms;
+  }
+
+  public AccountsData marketingFlag(Boolean marketingFlag) {
+    this.marketingFlag = marketingFlag;
+    return this;
+  }
+
+   /**
+   * Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. 
+   * @return marketingFlag
+  **/
+  @ApiModelProperty(example = "true", required = true, value = "Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. ")
+  public Boolean getMarketingFlag() {
+    return marketingFlag;
+  }
+
+  public void setMarketingFlag(Boolean marketingFlag) {
+    this.marketingFlag = marketingFlag;
+  }
+
+  public AccountsData taxSchemeCode(String taxSchemeCode) {
+    this.taxSchemeCode = taxSchemeCode;
+    return this;
+  }
+
+   /**
+   * CURTAXSCMS - Cerillion Ref data Code indicating tax scheme applicable to the account. 
+   * @return taxSchemeCode
+  **/
+  @ApiModelProperty(example = "UKS", required = true, value = "CURTAXSCMS - Cerillion Ref data Code indicating tax scheme applicable to the account. ")
+  public String getTaxSchemeCode() {
+    return taxSchemeCode;
+  }
+
+  public void setTaxSchemeCode(String taxSchemeCode) {
+    this.taxSchemeCode = taxSchemeCode;
+  }
+
+  public AccountsData taxIdentification(String taxIdentification) {
+    this.taxIdentification = taxIdentification;
+    return this;
+  }
+
+   /**
+   * Get taxIdentification
+   * @return taxIdentification
+  **/
+  @ApiModelProperty(example = "1234567890", required = true, value = "")
+  public String getTaxIdentification() {
+    return taxIdentification;
+  }
+
+  public void setTaxIdentification(String taxIdentification) {
+    this.taxIdentification = taxIdentification;
+  }
+
+  public AccountsData faultPriority(Integer faultPriority) {
+    this.faultPriority = faultPriority;
+    return this;
+  }
+
+   /**
+   * Code indicating the priority to be assigned to dealing with faults raised against this account (reference data PRIORITY) 
+   * @return faultPriority
+  **/
+  @ApiModelProperty(example = "99", required = true, value = "Code indicating the priority to be assigned to dealing with faults raised against this account (reference data PRIORITY) ")
+  public Integer getFaultPriority() {
+    return faultPriority;
+  }
+
+  public void setFaultPriority(Integer faultPriority) {
+    this.faultPriority = faultPriority;
+  }
+
+  public AccountsData billingAddress(Address billingAddress) {
+    this.billingAddress = billingAddress;
+    return this;
+  }
+
+   /**
+   * Get billingAddress
+   * @return billingAddress
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Address getBillingAddress() {
+    return billingAddress;
+  }
+
+  public void setBillingAddress(Address billingAddress) {
+    this.billingAddress = billingAddress;
+  }
+
   public AccountsData correspondenceAddress(Address correspondenceAddress) {
     this.correspondenceAddress = correspondenceAddress;
     return this;
@@ -286,6 +563,24 @@ public class AccountsData {
     this.contactAssociation = contactAssociation;
   }
 
+  public AccountsData contactAttribute(CustomAtribute contactAttribute) {
+    this.contactAttribute = contactAttribute;
+    return this;
+  }
+
+   /**
+   * Get contactAttribute
+   * @return contactAttribute
+  **/
+  @ApiModelProperty(value = "")
+  public CustomAtribute getContactAttribute() {
+    return contactAttribute;
+  }
+
+  public void setContactAttribute(CustomAtribute contactAttribute) {
+    this.contactAttribute = contactAttribute;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -307,13 +602,27 @@ public class AccountsData {
         Objects.equals(this.accountClassificationCode, accountsData.accountClassificationCode) &&
         Objects.equals(this.countryCode, accountsData.countryCode) &&
         Objects.equals(this.currencyCode, accountsData.currencyCode) &&
+        Objects.equals(this.corporateId, accountsData.corporateId) &&
+        Objects.equals(this.corporateIdType, accountsData.corporateIdType) &&
+        Objects.equals(this.billLanguageCode, accountsData.billLanguageCode) &&
+        Objects.equals(this.billMediaCode, accountsData.billMediaCode) &&
+        Objects.equals(this.billToEmailAddress, accountsData.billToEmailAddress) &&
+        Objects.equals(this.billItemisation, accountsData.billItemisation) &&
+        Objects.equals(this.basicCollectionPlanCode, accountsData.basicCollectionPlanCode) &&
+        Objects.equals(this.paymentTerms, accountsData.paymentTerms) &&
+        Objects.equals(this.marketingFlag, accountsData.marketingFlag) &&
+        Objects.equals(this.taxSchemeCode, accountsData.taxSchemeCode) &&
+        Objects.equals(this.taxIdentification, accountsData.taxIdentification) &&
+        Objects.equals(this.faultPriority, accountsData.faultPriority) &&
+        Objects.equals(this.billingAddress, accountsData.billingAddress) &&
         Objects.equals(this.correspondenceAddress, accountsData.correspondenceAddress) &&
-        Objects.equals(this.contactAssociation, accountsData.contactAssociation);
+        Objects.equals(this.contactAssociation, accountsData.contactAssociation) &&
+        Objects.equals(this.contactAttribute, accountsData.contactAttribute);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountIndex, clientAccountUid, customerIndex, customerUid, accountOwnersName, companyLegalEntityName, accountTypeCode, accountCategoryCode, accountClassificationCode, countryCode, currencyCode, correspondenceAddress, contactAssociation);
+    return Objects.hash(accountIndex, clientAccountUid, customerIndex, customerUid, accountOwnersName, companyLegalEntityName, accountTypeCode, accountCategoryCode, accountClassificationCode, countryCode, currencyCode, corporateId, corporateIdType, billLanguageCode, billMediaCode, billToEmailAddress, billItemisation, basicCollectionPlanCode, paymentTerms, marketingFlag, taxSchemeCode, taxIdentification, faultPriority, billingAddress, correspondenceAddress, contactAssociation, contactAttribute);
   }
 
 
@@ -333,8 +642,22 @@ public class AccountsData {
     sb.append("    accountClassificationCode: ").append(toIndentedString(accountClassificationCode)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    corporateId: ").append(toIndentedString(corporateId)).append("\n");
+    sb.append("    corporateIdType: ").append(toIndentedString(corporateIdType)).append("\n");
+    sb.append("    billLanguageCode: ").append(toIndentedString(billLanguageCode)).append("\n");
+    sb.append("    billMediaCode: ").append(toIndentedString(billMediaCode)).append("\n");
+    sb.append("    billToEmailAddress: ").append(toIndentedString(billToEmailAddress)).append("\n");
+    sb.append("    billItemisation: ").append(toIndentedString(billItemisation)).append("\n");
+    sb.append("    basicCollectionPlanCode: ").append(toIndentedString(basicCollectionPlanCode)).append("\n");
+    sb.append("    paymentTerms: ").append(toIndentedString(paymentTerms)).append("\n");
+    sb.append("    marketingFlag: ").append(toIndentedString(marketingFlag)).append("\n");
+    sb.append("    taxSchemeCode: ").append(toIndentedString(taxSchemeCode)).append("\n");
+    sb.append("    taxIdentification: ").append(toIndentedString(taxIdentification)).append("\n");
+    sb.append("    faultPriority: ").append(toIndentedString(faultPriority)).append("\n");
+    sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
     sb.append("    correspondenceAddress: ").append(toIndentedString(correspondenceAddress)).append("\n");
     sb.append("    contactAssociation: ").append(toIndentedString(contactAssociation)).append("\n");
+    sb.append("    contactAttribute: ").append(toIndentedString(contactAttribute)).append("\n");
     sb.append("}");
     return sb.toString();
   }

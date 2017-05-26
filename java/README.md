@@ -71,11 +71,11 @@ public class EsbOrdersApiExample {
     public static void main(String[] args) {
         
         EsbOrdersApi apiInstance = new EsbOrdersApi();
-        CustomAtribute inventoryItem = new CustomAtribute(); // CustomAtribute | Inventory item to add
+        AccountsData accountData = new AccountsData(); // AccountsData | Detailed Information of an account
         try {
-            apiInstance.changeMsisdn(inventoryItem);
+            apiInstance.newAccount(accountData);
         } catch (ApiException e) {
-            System.err.println("Exception when calling EsbOrdersApi#changeMsisdn");
+            System.err.println("Exception when calling EsbOrdersApi#newAccount");
             e.printStackTrace();
         }
     }
@@ -89,13 +89,9 @@ All URIs are relative to *https://virtserver.swaggerhub.com/JoaoFlorindo/Example
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*EsbOrdersApi* | [**changeMsisdn**](docs/EsbOrdersApi.md#changeMsisdn) | **POST** /orderService/changeMsisdn | adds an inventory item
-*EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | adds an inventory item
-*EsbOrdersApi* | [**newAccountRelationship**](docs/EsbOrdersApi.md#newAccountRelationship) | **POST** /orderService/newAccountRelationship | adds an inventory item
+*EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 *EsbOrdersApi* | [**newContact**](docs/EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 *EsbOrdersApi* | [**newCustomer**](docs/EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
-*EsbOrdersApi* | [**provideOrder**](docs/EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | adds an inventory item
-*EsbOrdersApi* | [**terminateAditionalService**](docs/EsbOrdersApi.md#terminateAditionalService) | **POST** /orderService/terminateAditionalService | adds an inventory item
 
 
 ## Documentation for Models
