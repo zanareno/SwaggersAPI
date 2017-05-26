@@ -9,7 +9,7 @@ package io.swagger.client.model
 import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 
-case class ContactsData (
+case class AccountsData (
   customerIndex: String,
   clientCustomerUid: String,
   contactsName: NameSchema,
@@ -17,11 +17,8 @@ case class ContactsData (
   phoneNumberBusiness: Option[String],
   phoneNumberFax: Option[String],
   phoneNumberMobile: Option[String],
-  emailAddress1: Option[String],
-  emailAddress2: Option[String],
   customerImportanceReason: Option[String],
   correspondenceAddress: Address,
-  groupCode: Option[String],
   contactAssociation: Option[ContactAssociation]
 ) extends ApiModel
 

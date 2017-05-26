@@ -5,6 +5,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.AccountsData
 import io.swagger.client.model.ContactsData
 import io.swagger.client.model.CustomersData
 import io.swagger.client.model.Manufacturer
@@ -40,7 +41,7 @@ object EsbOrdersApi {
    * 
    * @param inventoryItem Inventory item to add
    */
-  def newAccount(inventoryItem: Option[Manufacturer] = None): ApiRequest[Unit] =
+  def newAccount(inventoryItem: Option[AccountsData] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/JoaoFlorindo/ExampleService/1.0.0", "/orderService/newAccount", "application/json")
       .withBody(inventoryItem)
       .withSuccessResponse[Unit](201)
@@ -70,11 +71,11 @@ object EsbOrdersApi {
    *   code 400 :  (bad input parameter)
    *   code 500 :  (internal error)
    * 
-   * @param inventoryItem Inventory item to add
+   * @param contactsData Detailed Information of contact
    */
-  def newContact(inventoryItem: Option[ContactsData] = None): ApiRequest[Unit] =
+  def newContact(contactsData: Option[ContactsData] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/JoaoFlorindo/ExampleService/1.0.0", "/orderService/newContact", "application/json")
-      .withBody(inventoryItem)
+      .withBody(contactsData)
       .withSuccessResponse[Unit](200)
       .withErrorResponse[Unit](400)
       .withErrorResponse[Unit](500)
