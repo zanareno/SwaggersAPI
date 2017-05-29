@@ -12,7 +12,7 @@ import io.swagger.client.model.NameSchema;
 /**
  * AccountsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T14:13:06.306Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T16:50:51.022Z")
 public class AccountsData {
   @SerializedName("accountIndex")
   private String accountIndex = null;
