@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **billToEmailAddress** | **String** | [EDEN-3043] The email address for billing purposes  |  [optional]
 **billItemisation** | **String** | Bill itemisation. One of&#x3D; ITEMBOTH, ITEMCSVO or ITEMNONE | 
 **basicCollectionPlanCode** | **String** | The base collection plan for the account, E.g. RES1, BLUE, SME1 | 
-**paymentTerms** | **String** |  | 
-**marketingFlag** | **Boolean** | Cerillion DB Table- SYSTEM_PARAMETERS where param_code &#x3D; &#39;DUEDY&#39; Column is keyed on AccountTypeCode.e.g. RES&#x3D;30,BUS&#x3D;45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int.  | 
+**paymentTerms** | **String** | Cerillion DB Table- SYSTEM_PARAMETERS where param_code &#x3D; &#39;DUEDY&#39; Column is keyed on AccountTypeCode.e.g. RES&#x3D;30,BUS&#x3D;45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int.  | 
+**marketingFlag** | **Boolean** | Flag indicating whether the account is allowed to be sent marketing material | 
 **taxSchemeCode** | **String** | CURTAXSCMS - Cerillion Ref data Code indicating tax scheme applicable to the account.  | 
 **taxIdentification** | **String** |  | 
 **faultPriority** | **Integer** | Code indicating the priority to be assigned to dealing with faults raised against this account (reference data PRIORITY)  | 

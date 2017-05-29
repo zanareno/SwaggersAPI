@@ -12,7 +12,7 @@ import io.swagger.client.model.NameSchema;
 /**
  * AccountsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T14:09:19.760Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T14:13:06.306Z")
 public class AccountsData {
   @SerializedName("accountIndex")
   private String accountIndex = null;
@@ -425,10 +425,10 @@ public class AccountsData {
   }
 
    /**
-   * Get paymentTerms
+   * Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. 
    * @return paymentTerms
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "30", required = true, value = "Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. ")
   public String getPaymentTerms() {
     return paymentTerms;
   }
@@ -443,10 +443,10 @@ public class AccountsData {
   }
 
    /**
-   * Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. 
+   * Flag indicating whether the account is allowed to be sent marketing material
    * @return marketingFlag
   **/
-  @ApiModelProperty(example = "true", required = true, value = "Cerillion DB Table- SYSTEM_PARAMETERS where param_code = 'DUEDY' Column is keyed on AccountTypeCode.e.g. RES=30,BUS=45 Defines the number of days until the payment is due. This field must hold an integer as it is passed through to Cerillion as an integer. The type has been left as a string to avoid a change to Salesforce. However, in the next WSDL change this should be updated to an Int. ")
+  @ApiModelProperty(example = "true", required = true, value = "Flag indicating whether the account is allowed to be sent marketing material")
   public Boolean getMarketingFlag() {
     return marketingFlag;
   }
