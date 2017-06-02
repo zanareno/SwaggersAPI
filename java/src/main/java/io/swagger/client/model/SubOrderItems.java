@@ -8,9 +8,10 @@ import io.swagger.client.model.Charge;
 import io.swagger.client.model.CustomAttribute;
 
 /**
- * SubOrderItems
+ * The set of constituent products take make up the top level package product. In Cerillion terms these are options within a package. 
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
+@ApiModel(description = "The set of constituent products take make up the top level package product. In Cerillion terms these are options within a package. ")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:46:15.664Z")
 public class SubOrderItems {
   @SerializedName("productGroupCode")
   private String productGroupCode = null;

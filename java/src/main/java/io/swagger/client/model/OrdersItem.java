@@ -10,9 +10,10 @@ import io.swagger.client.model.CustomAttribute;
 import io.swagger.client.model.SubOrderItems;
 
 /**
- * OrdersItem
+ * A saleable product. One saleable item is added to the Cerillion basket for each element present. A ProvideOrder may contain only one PACKAGE Order Item. 
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
+@ApiModel(description = "A saleable product. One saleable item is added to the Cerillion basket for each element present. A ProvideOrder may contain only one PACKAGE Order Item. ")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:46:15.664Z")
 public class OrdersItem {
   @SerializedName("orderItemIndex")
   private String orderItemIndex = null;
@@ -92,10 +93,10 @@ public class OrdersItem {
   }
 
    /**
-   * Get clientOrderItemId
+   * Client's unique identifier for the Order Item
    * @return clientOrderItemId
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Client's unique identifier for the Order Item")
   public String getClientOrderItemId() {
     return clientOrderItemId;
   }
