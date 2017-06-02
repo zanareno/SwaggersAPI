@@ -4,17 +4,14 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.Charge;
-import io.swagger.client.model.ContactAssociation;
 import io.swagger.client.model.CustomAttribute;
 import io.swagger.client.model.OrdersItem;
-import io.swagger.client.model.SubOrderItems;
 import org.joda.time.LocalDate;
 
 /**
  * ProvideOrder
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:57.581Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
 public class ProvideOrder {
   @SerializedName("clientProvideOrderId")
   private String clientProvideOrderId = null;
@@ -36,18 +33,6 @@ public class ProvideOrder {
 
   @SerializedName("orderItem")
   private OrdersItem orderItem = null;
-
-  @SerializedName("productAttribute")
-  private CustomAttribute productAttribute = null;
-
-  @SerializedName("contactAssiociation")
-  private ContactAssociation contactAssiociation = null;
-
-  @SerializedName("charge")
-  private Charge charge = null;
-
-  @SerializedName("subOrderItems")
-  private SubOrderItems subOrderItems = null;
 
   public ProvideOrder clientProvideOrderId(String clientProvideOrderId) {
     this.clientProvideOrderId = clientProvideOrderId;
@@ -127,10 +112,10 @@ public class ProvideOrder {
   }
 
    /**
-   * Get requestedStartDate
+   * The date requested by the customer for the ordered items to take effect.
    * @return requestedStartDate
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date requested by the customer for the ordered items to take effect.")
   public LocalDate getRequestedStartDate() {
     return requestedStartDate;
   }
@@ -175,78 +160,6 @@ public class ProvideOrder {
     this.orderItem = orderItem;
   }
 
-  public ProvideOrder productAttribute(CustomAttribute productAttribute) {
-    this.productAttribute = productAttribute;
-    return this;
-  }
-
-   /**
-   * Get productAttribute
-   * @return productAttribute
-  **/
-  @ApiModelProperty(value = "")
-  public CustomAttribute getProductAttribute() {
-    return productAttribute;
-  }
-
-  public void setProductAttribute(CustomAttribute productAttribute) {
-    this.productAttribute = productAttribute;
-  }
-
-  public ProvideOrder contactAssiociation(ContactAssociation contactAssiociation) {
-    this.contactAssiociation = contactAssiociation;
-    return this;
-  }
-
-   /**
-   * Get contactAssiociation
-   * @return contactAssiociation
-  **/
-  @ApiModelProperty(value = "")
-  public ContactAssociation getContactAssiociation() {
-    return contactAssiociation;
-  }
-
-  public void setContactAssiociation(ContactAssociation contactAssiociation) {
-    this.contactAssiociation = contactAssiociation;
-  }
-
-  public ProvideOrder charge(Charge charge) {
-    this.charge = charge;
-    return this;
-  }
-
-   /**
-   * Get charge
-   * @return charge
-  **/
-  @ApiModelProperty(value = "")
-  public Charge getCharge() {
-    return charge;
-  }
-
-  public void setCharge(Charge charge) {
-    this.charge = charge;
-  }
-
-  public ProvideOrder subOrderItems(SubOrderItems subOrderItems) {
-    this.subOrderItems = subOrderItems;
-    return this;
-  }
-
-   /**
-   * Get subOrderItems
-   * @return subOrderItems
-  **/
-  @ApiModelProperty(value = "")
-  public SubOrderItems getSubOrderItems() {
-    return subOrderItems;
-  }
-
-  public void setSubOrderItems(SubOrderItems subOrderItems) {
-    this.subOrderItems = subOrderItems;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -263,16 +176,12 @@ public class ProvideOrder {
         Objects.equals(this.accountCurrencyId, provideOrder.accountCurrencyId) &&
         Objects.equals(this.requestedStartDate, provideOrder.requestedStartDate) &&
         Objects.equals(this.orderAttribute, provideOrder.orderAttribute) &&
-        Objects.equals(this.orderItem, provideOrder.orderItem) &&
-        Objects.equals(this.productAttribute, provideOrder.productAttribute) &&
-        Objects.equals(this.contactAssiociation, provideOrder.contactAssiociation) &&
-        Objects.equals(this.charge, provideOrder.charge) &&
-        Objects.equals(this.subOrderItems, provideOrder.subOrderItems);
+        Objects.equals(this.orderItem, provideOrder.orderItem);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(clientProvideOrderId, accountIndex, accountUid, accountCurrencyId, requestedStartDate, orderAttribute, orderItem, productAttribute, contactAssiociation, charge, subOrderItems);
+    return Objects.hash(clientProvideOrderId, accountIndex, accountUid, accountCurrencyId, requestedStartDate, orderAttribute, orderItem);
   }
 
 
@@ -288,10 +197,6 @@ public class ProvideOrder {
     sb.append("    requestedStartDate: ").append(toIndentedString(requestedStartDate)).append("\n");
     sb.append("    orderAttribute: ").append(toIndentedString(orderAttribute)).append("\n");
     sb.append("    orderItem: ").append(toIndentedString(orderItem)).append("\n");
-    sb.append("    productAttribute: ").append(toIndentedString(productAttribute)).append("\n");
-    sb.append("    contactAssiociation: ").append(toIndentedString(contactAssiociation)).append("\n");
-    sb.append("    charge: ").append(toIndentedString(charge)).append("\n");
-    sb.append("    subOrderItems: ").append(toIndentedString(subOrderItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }

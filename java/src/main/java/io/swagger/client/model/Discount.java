@@ -7,9 +7,10 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.LocalDate;
 
 /**
- * Discount
+ * An optional discount applied to the charge for the specified period of time.  If not supplied then the standard price in the catalogue is used. 
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:57.581Z")
+@ApiModel(description = "An optional discount applied to the charge for the specified period of time.  If not supplied then the standard price in the catalogue is used. ")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
 public class Discount {
   @SerializedName("discountValue")
   private Double discountValue = null;
@@ -29,10 +30,10 @@ public class Discount {
   }
 
    /**
-   * Get discountValue
+   * The discounted value of the charge. This value overrides the standard price in the catalogue for the specified period of time. This is in the currency specified by AccountCurrencyId. 
    * @return discountValue
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "The discounted value of the charge. This value overrides the standard price in the catalogue for the specified period of time. This is in the currency specified by AccountCurrencyId. ")
   public Double getDiscountValue() {
     return discountValue;
   }
@@ -47,10 +48,10 @@ public class Discount {
   }
 
    /**
-   * Get originalValue
+   * The original value of the charge. After the discount has expired this charge applies. This is in the currency specified by AccountCurrencyId. 
    * @return originalValue
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "The original value of the charge. After the discount has expired this charge applies. This is in the currency specified by AccountCurrencyId. ")
   public Double getOriginalValue() {
     return originalValue;
   }
@@ -65,10 +66,10 @@ public class Discount {
   }
 
    /**
-   * Get discountStartDate
+   * The date that the discount begins. Currently this is unsupported as the discount begins when the product begins.
    * @return discountStartDate
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "The date that the discount begins. Currently this is unsupported as the discount begins when the product begins.")
   public LocalDate getDiscountStartDate() {
     return discountStartDate;
   }
@@ -83,10 +84,10 @@ public class Discount {
   }
 
    /**
-   * Get discountEndDate
+   * The date that the discount ends.
    * @return discountEndDate
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "The date that the discount ends.")
   public LocalDate getDiscountEndDate() {
     return discountEndDate;
   }

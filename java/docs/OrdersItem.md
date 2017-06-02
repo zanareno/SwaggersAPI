@@ -12,6 +12,10 @@ Name | Type | Description | Notes
 **creditProfileCode** | **String** | The code of the credit profile assigned to the service. The credit profile record defines various credit limits and bar settings.   This setting is only required for the PACKAGE Product Type  |  [optional]
 **dispatchMethod** | **String** | The method of dispatch.Allowable values are&#x3D; INTERNAL, EXTERNAL This field is used to choose the work order on Cerillion  This setting is only required the PACKAGE product type  |  [optional]
 **msisdnType** | **String** | The type of MSISDN to assign to the user’s services. One of STANDARD;  GOLDEN;  PORTED_IN; This setting is only required the PACKAGE product type  |  [optional]
+**productAttribute** | [**CustomAttribute**](CustomAttribute.md) |  |  [optional]
+**contactAssiociation** | [**ContactAssociation**](ContactAssociation.md) |  |  [optional]
+**charge** | [**Charge**](Charge.md) |  |  [optional]
+**subOrderItems** | [**SubOrderItems**](SubOrderItems.md) |  |  [optional]
 
 
 

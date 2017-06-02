@@ -7,9 +7,10 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Discount;
 
 /**
- * Charge
+ * Repeating Node 0 to Many A charge to be associated with the saleable product.
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:57.581Z")
+@ApiModel(description = "Repeating Node 0 to Many A charge to be associated with the saleable product.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
 public class Charge {
   @SerializedName("chargeCode")
   private String chargeCode = null;
@@ -23,10 +24,10 @@ public class Charge {
   }
 
    /**
-   * Get chargeCode
+   * The charge code. These are defined on Cerillion.  For example One Off O1 = Non-recurring Charge O2 = NRC Zero Charge O3 = 12 Mnth Contract Subsidised Equipment Charge O4 = 18 Mnth Contract Subsidised Equipment Charge O5 = 24 Mnth Contract Subsidised Equipment Charge O6 = 36 Mnth Contract Subsidised Equipment Charge  Rental / Subscription R1 = Monthly Charge R2 = Zero Charge R3 = 12 Month Contract Charge R4 = 18 Month Contract Charge R5 = 24 Month Contract Charge R6 = 36 Month Contract Charge R7 = 12 Month Contract Subsidised Equipment Charge R8 = 18 Month Contract Subsidised Equipment Charge R9 = 24 Month Contract Subsidised Equipment Charge RA = 36 Month Contract Subsidised Equipment Charge RP = Package Charge (Zero) 
    * @return chargeCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "The charge code. These are defined on Cerillion.  For example One Off O1 = Non-recurring Charge O2 = NRC Zero Charge O3 = 12 Mnth Contract Subsidised Equipment Charge O4 = 18 Mnth Contract Subsidised Equipment Charge O5 = 24 Mnth Contract Subsidised Equipment Charge O6 = 36 Mnth Contract Subsidised Equipment Charge  Rental / Subscription R1 = Monthly Charge R2 = Zero Charge R3 = 12 Month Contract Charge R4 = 18 Month Contract Charge R5 = 24 Month Contract Charge R6 = 36 Month Contract Charge R7 = 12 Month Contract Subsidised Equipment Charge R8 = 18 Month Contract Subsidised Equipment Charge R9 = 24 Month Contract Subsidised Equipment Charge RA = 36 Month Contract Subsidised Equipment Charge RP = Package Charge (Zero) ")
   public String getChargeCode() {
     return chargeCode;
   }

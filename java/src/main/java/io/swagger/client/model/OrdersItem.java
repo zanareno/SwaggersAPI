@@ -4,11 +4,15 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.Charge;
+import io.swagger.client.model.ContactAssociation;
+import io.swagger.client.model.CustomAttribute;
+import io.swagger.client.model.SubOrderItems;
 
 /**
  * OrdersItem
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:57.581Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:35:38.145Z")
 public class OrdersItem {
   @SerializedName("orderItemIndex")
   private String orderItemIndex = null;
@@ -33,6 +37,18 @@ public class OrdersItem {
 
   @SerializedName("msisdnType")
   private String msisdnType = null;
+
+  @SerializedName("productAttribute")
+  private CustomAttribute productAttribute = null;
+
+  @SerializedName("contactAssiociation")
+  private ContactAssociation contactAssiociation = null;
+
+  @SerializedName("charge")
+  private Charge charge = null;
+
+  @SerializedName("subOrderItems")
+  private SubOrderItems subOrderItems = null;
 
   public OrdersItem orderItemIndex(String orderItemIndex) {
     this.orderItemIndex = orderItemIndex;
@@ -178,6 +194,78 @@ public class OrdersItem {
     this.msisdnType = msisdnType;
   }
 
+  public OrdersItem productAttribute(CustomAttribute productAttribute) {
+    this.productAttribute = productAttribute;
+    return this;
+  }
+
+   /**
+   * Get productAttribute
+   * @return productAttribute
+  **/
+  @ApiModelProperty(value = "")
+  public CustomAttribute getProductAttribute() {
+    return productAttribute;
+  }
+
+  public void setProductAttribute(CustomAttribute productAttribute) {
+    this.productAttribute = productAttribute;
+  }
+
+  public OrdersItem contactAssiociation(ContactAssociation contactAssiociation) {
+    this.contactAssiociation = contactAssiociation;
+    return this;
+  }
+
+   /**
+   * Get contactAssiociation
+   * @return contactAssiociation
+  **/
+  @ApiModelProperty(value = "")
+  public ContactAssociation getContactAssiociation() {
+    return contactAssiociation;
+  }
+
+  public void setContactAssiociation(ContactAssociation contactAssiociation) {
+    this.contactAssiociation = contactAssiociation;
+  }
+
+  public OrdersItem charge(Charge charge) {
+    this.charge = charge;
+    return this;
+  }
+
+   /**
+   * Get charge
+   * @return charge
+  **/
+  @ApiModelProperty(value = "")
+  public Charge getCharge() {
+    return charge;
+  }
+
+  public void setCharge(Charge charge) {
+    this.charge = charge;
+  }
+
+  public OrdersItem subOrderItems(SubOrderItems subOrderItems) {
+    this.subOrderItems = subOrderItems;
+    return this;
+  }
+
+   /**
+   * Get subOrderItems
+   * @return subOrderItems
+  **/
+  @ApiModelProperty(value = "")
+  public SubOrderItems getSubOrderItems() {
+    return subOrderItems;
+  }
+
+  public void setSubOrderItems(SubOrderItems subOrderItems) {
+    this.subOrderItems = subOrderItems;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -195,12 +283,16 @@ public class OrdersItem {
         Objects.equals(this.productCode, ordersItem.productCode) &&
         Objects.equals(this.creditProfileCode, ordersItem.creditProfileCode) &&
         Objects.equals(this.dispatchMethod, ordersItem.dispatchMethod) &&
-        Objects.equals(this.msisdnType, ordersItem.msisdnType);
+        Objects.equals(this.msisdnType, ordersItem.msisdnType) &&
+        Objects.equals(this.productAttribute, ordersItem.productAttribute) &&
+        Objects.equals(this.contactAssiociation, ordersItem.contactAssiociation) &&
+        Objects.equals(this.charge, ordersItem.charge) &&
+        Objects.equals(this.subOrderItems, ordersItem.subOrderItems);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderItemIndex, relatedOrderItemIndex, clientOrderItemId, productType, productCode, creditProfileCode, dispatchMethod, msisdnType);
+    return Objects.hash(orderItemIndex, relatedOrderItemIndex, clientOrderItemId, productType, productCode, creditProfileCode, dispatchMethod, msisdnType, productAttribute, contactAssiociation, charge, subOrderItems);
   }
 
 
@@ -217,6 +309,10 @@ public class OrdersItem {
     sb.append("    creditProfileCode: ").append(toIndentedString(creditProfileCode)).append("\n");
     sb.append("    dispatchMethod: ").append(toIndentedString(dispatchMethod)).append("\n");
     sb.append("    msisdnType: ").append(toIndentedString(msisdnType)).append("\n");
+    sb.append("    productAttribute: ").append(toIndentedString(productAttribute)).append("\n");
+    sb.append("    contactAssiociation: ").append(toIndentedString(contactAssiociation)).append("\n");
+    sb.append("    charge: ").append(toIndentedString(charge)).append("\n");
+    sb.append("    subOrderItems: ").append(toIndentedString(subOrderItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }
