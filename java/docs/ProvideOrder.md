@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **productAttribute** | [**CustomAttribute**](CustomAttribute.md) |  |  [optional]
 **contactAssiociation** | [**ContactAssociation**](ContactAssociation.md) |  |  [optional]
 **charge** | [**Charge**](Charge.md) |  |  [optional]
+**subOrderItems** | [**SubOrderItems**](SubOrderItems.md) |  |  [optional]
 
 
 

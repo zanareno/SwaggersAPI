@@ -92,7 +92,6 @@ Class | Method | HTTP request | Description
 *EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 *EsbOrdersApi* | [**newContact**](docs/EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 *EsbOrdersApi* | [**newCustomer**](docs/EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
-*EsbOrdersApi* | [**provideOrder**](docs/EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Provide an order
 
 
 ## Documentation for Models
@@ -104,9 +103,11 @@ Class | Method | HTTP request | Description
  - [ContactsData](docs/ContactsData.md)
  - [CustomAttribute](docs/CustomAttribute.md)
  - [CustomersData](docs/CustomersData.md)
+ - [Discount](docs/Discount.md)
  - [NameSchema](docs/NameSchema.md)
  - [OrdersItem](docs/OrdersItem.md)
  - [ProvideOrder](docs/ProvideOrder.md)
+ - [SubOrderItems](docs/SubOrderItems.md)
 
 
 ## Documentation for Authorization

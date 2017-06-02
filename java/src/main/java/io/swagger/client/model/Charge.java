@@ -4,27 +4,18 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.LocalDate;
+import io.swagger.client.model.Discount;
 
 /**
  * Charge
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T15:49:45.727Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:07:39.798Z")
 public class Charge {
   @SerializedName("chargeCode")
   private String chargeCode = null;
 
-  @SerializedName("discountValue")
-  private Double discountValue = null;
-
-  @SerializedName("originalValue")
-  private Double originalValue = null;
-
-  @SerializedName("discountStartDate")
-  private LocalDate discountStartDate = null;
-
-  @SerializedName("discountEndDate")
-  private LocalDate discountEndDate = null;
+  @SerializedName("discount")
+  private Discount discount = null;
 
   public Charge chargeCode(String chargeCode) {
     this.chargeCode = chargeCode;
@@ -44,76 +35,22 @@ public class Charge {
     this.chargeCode = chargeCode;
   }
 
-  public Charge discountValue(Double discountValue) {
-    this.discountValue = discountValue;
+  public Charge discount(Discount discount) {
+    this.discount = discount;
     return this;
   }
 
    /**
-   * Get discountValue
-   * @return discountValue
+   * Get discount
+   * @return discount
   **/
-  @ApiModelProperty(required = true, value = "")
-  public Double getDiscountValue() {
-    return discountValue;
+  @ApiModelProperty(value = "")
+  public Discount getDiscount() {
+    return discount;
   }
 
-  public void setDiscountValue(Double discountValue) {
-    this.discountValue = discountValue;
-  }
-
-  public Charge originalValue(Double originalValue) {
-    this.originalValue = originalValue;
-    return this;
-  }
-
-   /**
-   * Get originalValue
-   * @return originalValue
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Double getOriginalValue() {
-    return originalValue;
-  }
-
-  public void setOriginalValue(Double originalValue) {
-    this.originalValue = originalValue;
-  }
-
-  public Charge discountStartDate(LocalDate discountStartDate) {
-    this.discountStartDate = discountStartDate;
-    return this;
-  }
-
-   /**
-   * Get discountStartDate
-   * @return discountStartDate
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public LocalDate getDiscountStartDate() {
-    return discountStartDate;
-  }
-
-  public void setDiscountStartDate(LocalDate discountStartDate) {
-    this.discountStartDate = discountStartDate;
-  }
-
-  public Charge discountEndDate(LocalDate discountEndDate) {
-    this.discountEndDate = discountEndDate;
-    return this;
-  }
-
-   /**
-   * Get discountEndDate
-   * @return discountEndDate
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public LocalDate getDiscountEndDate() {
-    return discountEndDate;
-  }
-
-  public void setDiscountEndDate(LocalDate discountEndDate) {
-    this.discountEndDate = discountEndDate;
+  public void setDiscount(Discount discount) {
+    this.discount = discount;
   }
 
 
@@ -127,15 +64,12 @@ public class Charge {
     }
     Charge charge = (Charge) o;
     return Objects.equals(this.chargeCode, charge.chargeCode) &&
-        Objects.equals(this.discountValue, charge.discountValue) &&
-        Objects.equals(this.originalValue, charge.originalValue) &&
-        Objects.equals(this.discountStartDate, charge.discountStartDate) &&
-        Objects.equals(this.discountEndDate, charge.discountEndDate);
+        Objects.equals(this.discount, charge.discount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chargeCode, discountValue, originalValue, discountStartDate, discountEndDate);
+    return Objects.hash(chargeCode, discount);
   }
 
 
@@ -145,10 +79,7 @@ public class Charge {
     sb.append("class Charge {\n");
     
     sb.append("    chargeCode: ").append(toIndentedString(chargeCode)).append("\n");
-    sb.append("    discountValue: ").append(toIndentedString(discountValue)).append("\n");
-    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
-    sb.append("    discountStartDate: ").append(toIndentedString(discountStartDate)).append("\n");
-    sb.append("    discountEndDate: ").append(toIndentedString(discountEndDate)).append("\n");
+    sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

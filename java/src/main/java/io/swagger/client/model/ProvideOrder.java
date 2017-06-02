@@ -8,12 +8,13 @@ import io.swagger.client.model.Charge;
 import io.swagger.client.model.ContactAssociation;
 import io.swagger.client.model.CustomAttribute;
 import io.swagger.client.model.OrdersItem;
+import io.swagger.client.model.SubOrderItems;
 import org.joda.time.LocalDate;
 
 /**
  * ProvideOrder
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T15:49:45.727Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:07:39.798Z")
 public class ProvideOrder {
   @SerializedName("clientProvideOrderId")
   private String clientProvideOrderId = null;
@@ -44,6 +45,9 @@ public class ProvideOrder {
 
   @SerializedName("charge")
   private Charge charge = null;
+
+  @SerializedName("subOrderItems")
+  private SubOrderItems subOrderItems = null;
 
   public ProvideOrder clientProvideOrderId(String clientProvideOrderId) {
     this.clientProvideOrderId = clientProvideOrderId;
@@ -225,6 +229,24 @@ public class ProvideOrder {
     this.charge = charge;
   }
 
+  public ProvideOrder subOrderItems(SubOrderItems subOrderItems) {
+    this.subOrderItems = subOrderItems;
+    return this;
+  }
+
+   /**
+   * Get subOrderItems
+   * @return subOrderItems
+  **/
+  @ApiModelProperty(value = "")
+  public SubOrderItems getSubOrderItems() {
+    return subOrderItems;
+  }
+
+  public void setSubOrderItems(SubOrderItems subOrderItems) {
+    this.subOrderItems = subOrderItems;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -244,12 +266,13 @@ public class ProvideOrder {
         Objects.equals(this.orderItem, provideOrder.orderItem) &&
         Objects.equals(this.productAttribute, provideOrder.productAttribute) &&
         Objects.equals(this.contactAssiociation, provideOrder.contactAssiociation) &&
-        Objects.equals(this.charge, provideOrder.charge);
+        Objects.equals(this.charge, provideOrder.charge) &&
+        Objects.equals(this.subOrderItems, provideOrder.subOrderItems);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(clientProvideOrderId, accountIndex, accountUid, accountCurrencyId, requestedStartDate, orderAttribute, orderItem, productAttribute, contactAssiociation, charge);
+    return Objects.hash(clientProvideOrderId, accountIndex, accountUid, accountCurrencyId, requestedStartDate, orderAttribute, orderItem, productAttribute, contactAssiociation, charge, subOrderItems);
   }
 
 
@@ -268,6 +291,7 @@ public class ProvideOrder {
     sb.append("    productAttribute: ").append(toIndentedString(productAttribute)).append("\n");
     sb.append("    contactAssiociation: ").append(toIndentedString(contactAssiociation)).append("\n");
     sb.append("    charge: ").append(toIndentedString(charge)).append("\n");
+    sb.append("    subOrderItems: ").append(toIndentedString(subOrderItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }
