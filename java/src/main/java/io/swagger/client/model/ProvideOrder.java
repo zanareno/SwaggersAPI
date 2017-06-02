@@ -14,7 +14,7 @@ import org.joda.time.LocalDate;
 /**
  * ProvideOrder
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:07:39.798Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:54.276Z")
 public class ProvideOrder {
   @SerializedName("clientProvideOrderId")
   private String clientProvideOrderId = null;

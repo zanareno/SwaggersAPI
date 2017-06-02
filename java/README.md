@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 *EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 *EsbOrdersApi* | [**newContact**](docs/EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 *EsbOrdersApi* | [**newCustomer**](docs/EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
+*EsbOrdersApi* | [**provideOrder**](docs/EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Creates new order. An order applies to a single account.
 
 
 ## Documentation for Models

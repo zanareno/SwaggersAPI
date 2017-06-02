@@ -9,7 +9,7 @@ import org.joda.time.LocalDate;
 /**
  * Discount
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:07:39.798Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:54.276Z")
 public class Discount {
   @SerializedName("discountValue")
   private Double discountValue = null;

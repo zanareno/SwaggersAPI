@@ -9,7 +9,7 @@ import io.swagger.client.model.Discount;
 /**
  * Charge
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:07:39.798Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:54.276Z")
 public class Charge {
   @SerializedName("chargeCode")
   private String chargeCode = null;
