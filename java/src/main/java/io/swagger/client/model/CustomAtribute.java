@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CustomAtribute
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:42:56.254Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:53:07.373Z")
 public class CustomAtribute {
   @SerializedName("name")
   private String name = null;

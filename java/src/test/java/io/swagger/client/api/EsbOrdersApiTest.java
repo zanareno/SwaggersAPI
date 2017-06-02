@@ -4,6 +4,7 @@ import io.swagger.client.ApiException;
 import io.swagger.client.model.AccountsData;
 import io.swagger.client.model.ContactsData;
 import io.swagger.client.model.CustomersData;
+import io.swagger.client.model.ProvideOrder;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -63,6 +64,22 @@ public class EsbOrdersApiTest {
     public void newCustomerTest() throws ApiException {
         CustomersData customersData = null;
         // api.newCustomer(customersData);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Provide na order
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void provideOrderTest() throws ApiException {
+        ProvideOrder provideOrder = null;
+        // api.provideOrder(provideOrder);
 
         // TODO: test validations
     }

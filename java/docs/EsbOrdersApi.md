@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**newAccount**](EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 [**newContact**](EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 [**newCustomer**](EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
+[**provideOrder**](EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Provide na order
 
 
 <a name="newAccount"></a>
@@ -127,6 +128,48 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customersData** | [**CustomersData**](CustomersData.md)| Detailed information of customer | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="provideOrder"></a>
+# **provideOrder**
+> provideOrder(provideOrder)
+
+Provide na order
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.EsbOrdersApi;
+
+
+EsbOrdersApi apiInstance = new EsbOrdersApi();
+ProvideOrder provideOrder = new ProvideOrder(); // ProvideOrder | Detailed Information of an account
+try {
+    apiInstance.provideOrder(provideOrder);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EsbOrdersApi#provideOrder");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **provideOrder** | [**ProvideOrder**](ProvideOrder.md)| Detailed Information of an account | [optional]
 
 ### Return type
 
