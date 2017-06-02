@@ -7,11 +7,12 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
 import io.swagger.client.model.CustomAtribute;
 import io.swagger.client.model.NameSchema;
+import org.joda.time.LocalDate;
 
 /**
  * ContactsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T16:50:51.022Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:42:56.254Z")
 public class ContactsData {
   @SerializedName("customerIndex")
   private String customerIndex = null;
@@ -21,6 +22,12 @@ public class ContactsData {
 
   @SerializedName("contactsName")
   private NameSchema contactsName = null;
+
+  @SerializedName("genderCode")
+  private String genderCode = null;
+
+  @SerializedName("birthDate")
+  private LocalDate birthDate = null;
 
   @SerializedName("consumerId")
   private String consumerId = null;
@@ -110,6 +117,42 @@ public class ContactsData {
 
   public void setContactsName(NameSchema contactsName) {
     this.contactsName = contactsName;
+  }
+
+  public ContactsData genderCode(String genderCode) {
+    this.genderCode = genderCode;
+    return this;
+  }
+
+   /**
+   * Get genderCode
+   * @return genderCode
+  **/
+  @ApiModelProperty(example = "M", required = true, value = "")
+  public String getGenderCode() {
+    return genderCode;
+  }
+
+  public void setGenderCode(String genderCode) {
+    this.genderCode = genderCode;
+  }
+
+  public ContactsData birthDate(LocalDate birthDate) {
+    this.birthDate = birthDate;
+    return this;
+  }
+
+   /**
+   * Get birthDate
+   * @return birthDate
+  **/
+  @ApiModelProperty(value = "")
+  public LocalDate getBirthDate() {
+    return birthDate;
+  }
+
+  public void setBirthDate(LocalDate birthDate) {
+    this.birthDate = birthDate;
   }
 
   public ContactsData consumerId(String consumerId) {
@@ -341,6 +384,8 @@ public class ContactsData {
     return Objects.equals(this.customerIndex, contactsData.customerIndex) &&
         Objects.equals(this.clientCustomerUid, contactsData.clientCustomerUid) &&
         Objects.equals(this.contactsName, contactsData.contactsName) &&
+        Objects.equals(this.genderCode, contactsData.genderCode) &&
+        Objects.equals(this.birthDate, contactsData.birthDate) &&
         Objects.equals(this.consumerId, contactsData.consumerId) &&
         Objects.equals(this.consumerType, contactsData.consumerType) &&
         Objects.equals(this.phoneNumberHome, contactsData.phoneNumberHome) &&
@@ -357,7 +402,7 @@ public class ContactsData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerIndex, clientCustomerUid, contactsName, consumerId, consumerType, phoneNumberHome, phoneNumberBusiness, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode, contactAttribute);
+    return Objects.hash(customerIndex, clientCustomerUid, contactsName, genderCode, birthDate, consumerId, consumerType, phoneNumberHome, phoneNumberBusiness, phoneNumberFax, phoneNumberMobile, emailAddress1, emailAddress2, customerImportanceReason, correspondenceAddress, groupCode, contactAttribute);
   }
 
 
@@ -369,6 +414,8 @@ public class ContactsData {
     sb.append("    customerIndex: ").append(toIndentedString(customerIndex)).append("\n");
     sb.append("    clientCustomerUid: ").append(toIndentedString(clientCustomerUid)).append("\n");
     sb.append("    contactsName: ").append(toIndentedString(contactsName)).append("\n");
+    sb.append("    genderCode: ").append(toIndentedString(genderCode)).append("\n");
+    sb.append("    birthDate: ").append(toIndentedString(birthDate)).append("\n");
     sb.append("    consumerId: ").append(toIndentedString(consumerId)).append("\n");
     sb.append("    consumerType: ").append(toIndentedString(consumerType)).append("\n");
     sb.append("    phoneNumberHome: ").append(toIndentedString(phoneNumberHome)).append("\n");

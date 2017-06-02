@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Address
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-29T16:50:51.022Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:42:56.254Z")
 public class Address {
   @SerializedName("streetAddress")
   private String streetAddress = null;

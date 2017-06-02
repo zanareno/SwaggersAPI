@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **customerIndex** | **String** |  | 
 **clientCustomerUid** | **String** |  | 
 **contactsName** | [**NameSchema**](NameSchema.md) |  | 
+**genderCode** | **String** |  | 
+**birthDate** | [**LocalDate**](LocalDate.md) |  |  [optional]
 **consumerId** | **String** | Generic identification number, such as passport or driving licence number. |  [optional]
 **consumerType** | **String** | E.g. Passport, SocialSecurityNumber |  [optional]
 **phoneNumberHome** | **String** |  |  [optional]
