@@ -69,7 +69,7 @@ public class EsbOrdersApiTest {
     }
     
     /**
-     * Provide na order
+     * Provide an order
      *
      * 
      *

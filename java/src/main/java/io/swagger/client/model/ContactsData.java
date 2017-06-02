@@ -5,14 +5,14 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
-import io.swagger.client.model.CustomAtribute;
+import io.swagger.client.model.CustomAttribute;
 import io.swagger.client.model.NameSchema;
 import org.joda.time.LocalDate;
 
 /**
  * ContactsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:53:07.373Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T15:49:45.727Z")
 public class ContactsData {
   @SerializedName("customerIndex")
   private String customerIndex = null;
@@ -63,7 +63,7 @@ public class ContactsData {
   private String groupCode = null;
 
   @SerializedName("contactAttribute")
-  private CustomAtribute contactAttribute = null;
+  private CustomAttribute contactAttribute = null;
 
   public ContactsData customerIndex(String customerIndex) {
     this.customerIndex = customerIndex;
@@ -341,10 +341,10 @@ public class ContactsData {
   }
 
    /**
-   * Client supplied identifier that allows a set of contacts to be grouped together
+   * Client supplied identifier that allows a set of contacts to be grouped together 
    * @return groupCode
   **/
-  @ApiModelProperty(value = "Client supplied identifier that allows a set of contacts to be grouped together")
+  @ApiModelProperty(value = "Client supplied identifier that allows a set of contacts to be grouped together ")
   public String getGroupCode() {
     return groupCode;
   }
@@ -353,7 +353,7 @@ public class ContactsData {
     this.groupCode = groupCode;
   }
 
-  public ContactsData contactAttribute(CustomAtribute contactAttribute) {
+  public ContactsData contactAttribute(CustomAttribute contactAttribute) {
     this.contactAttribute = contactAttribute;
     return this;
   }
@@ -363,11 +363,11 @@ public class ContactsData {
    * @return contactAttribute
   **/
   @ApiModelProperty(value = "")
-  public CustomAtribute getContactAttribute() {
+  public CustomAttribute getContactAttribute() {
     return contactAttribute;
   }
 
-  public void setContactAttribute(CustomAtribute contactAttribute) {
+  public void setContactAttribute(CustomAttribute contactAttribute) {
     this.contactAttribute = contactAttribute;
   }
 

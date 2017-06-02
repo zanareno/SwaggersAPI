@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **billingAddress** | [**Address**](Address.md) |  | 
 **correspondenceAddress** | [**Address**](Address.md) |  |  [optional]
 **contactAssociation** | [**ContactAssociation**](ContactAssociation.md) |  |  [optional]
-**contactAttribute** | [**CustomAtribute**](CustomAtribute.md) |  |  [optional]
+**contactAttribute** | [**CustomAttribute**](CustomAttribute.md) |  |  [optional]
 
 
 

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**newAccount**](EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 [**newContact**](EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 [**newCustomer**](EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
-[**provideOrder**](EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Provide na order
+[**provideOrder**](EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Provide an order
 
 
 <a name="newAccount"></a>
@@ -146,7 +146,7 @@ No authorization required
 # **provideOrder**
 > provideOrder(provideOrder)
 
-Provide na order
+Provide an order
 
 ### Example
 ```java

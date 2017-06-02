@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **emailAddress2** | **String** |  |  [optional]
 **customerImportanceReason** | **String** |  |  [optional]
 **correspondenceAddress** | [**Address**](Address.md) |  | 
-**groupCode** | **String** | Client supplied identifier that allows a set of contacts to be grouped together |  [optional]
-**contactAttribute** | [**CustomAtribute**](CustomAtribute.md) |  |  [optional]
+**groupCode** | **String** | Client supplied identifier that allows a set of contacts to be grouped together  |  [optional]
+**contactAttribute** | [**CustomAttribute**](CustomAttribute.md) |  |  [optional]
 
 
 

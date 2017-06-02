@@ -6,13 +6,13 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Address;
 import io.swagger.client.model.ContactAssociation;
-import io.swagger.client.model.CustomAtribute;
+import io.swagger.client.model.CustomAttribute;
 import io.swagger.client.model.NameSchema;
 
 /**
  * AccountsData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T14:53:07.373Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T15:49:45.727Z")
 public class AccountsData {
   @SerializedName("accountIndex")
   private String accountIndex = null;
@@ -93,7 +93,7 @@ public class AccountsData {
   private ContactAssociation contactAssociation = null;
 
   @SerializedName("contactAttribute")
-  private CustomAtribute contactAttribute = null;
+  private CustomAttribute contactAttribute = null;
 
   public AccountsData accountIndex(String accountIndex) {
     this.accountIndex = accountIndex;
@@ -563,7 +563,7 @@ public class AccountsData {
     this.contactAssociation = contactAssociation;
   }
 
-  public AccountsData contactAttribute(CustomAtribute contactAttribute) {
+  public AccountsData contactAttribute(CustomAttribute contactAttribute) {
     this.contactAttribute = contactAttribute;
     return this;
   }
@@ -573,11 +573,11 @@ public class AccountsData {
    * @return contactAttribute
   **/
   @ApiModelProperty(value = "")
-  public CustomAtribute getContactAttribute() {
+  public CustomAttribute getContactAttribute() {
     return contactAttribute;
   }
 
-  public void setContactAttribute(CustomAtribute contactAttribute) {
+  public void setContactAttribute(CustomAttribute contactAttribute) {
     this.contactAttribute = contactAttribute;
   }
 

@@ -379,7 +379,7 @@ public class EsbOrdersApi {
     }
 
     /**
-     * Provide na order
+     * Provide an order
      * 
      * @param provideOrder Detailed Information of an account (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -389,7 +389,7 @@ public class EsbOrdersApi {
     }
 
     /**
-     * Provide na order
+     * Provide an order
      * 
      * @param provideOrder Detailed Information of an account (optional)
      * @return ApiResponse&lt;Void&gt;
@@ -401,7 +401,7 @@ public class EsbOrdersApi {
     }
 
     /**
-     * Provide na order (asynchronously)
+     * Provide an order (asynchronously)
      * 
      * @param provideOrder Detailed Information of an account (optional)
      * @param callback The callback to be executed when the API call finishes
