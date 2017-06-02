@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * NameSchema
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:54.276Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:12:57.581Z")
 public class NameSchema {
   @SerializedName("title")
   private String title = null;
