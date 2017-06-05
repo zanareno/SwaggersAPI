@@ -21,6 +21,7 @@ import io.swagger.client.model.ContactsData;
 import io.swagger.client.model.CustomersData;
 import io.swagger.client.model.NewAccountRelationship;
 import io.swagger.client.model.ProvideOrder;
+import io.swagger.client.model.TerminateAdditionalService;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -141,6 +142,103 @@ public class EsbOrdersApi {
         }
 
         com.squareup.okhttp.Call call = changeMsisdnCall(changeMsisdn, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /* Build call for deleteAdditionalService */
+    private com.squareup.okhttp.Call deleteAdditionalServiceCall(TerminateAdditionalService deleteAdditionalService, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = deleteAdditionalService;
+        
+
+        // create path and map variables
+        String localVarPath = "/orderService/deleteAdditionalService".replaceAll("\\{format\\}","json");
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    /**
+     * Delete Additional Service
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param deleteAdditionalService Delete Additional Service (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void deleteAdditionalService(TerminateAdditionalService deleteAdditionalService) throws ApiException {
+        deleteAdditionalServiceWithHttpInfo(deleteAdditionalService);
+    }
+
+    /**
+     * Delete Additional Service
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param deleteAdditionalService Delete Additional Service (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> deleteAdditionalServiceWithHttpInfo(TerminateAdditionalService deleteAdditionalService) throws ApiException {
+        com.squareup.okhttp.Call call = deleteAdditionalServiceCall(deleteAdditionalService, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Delete Additional Service (asynchronously)
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param deleteAdditionalService Delete Additional Service (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call deleteAdditionalServiceAsync(TerminateAdditionalService deleteAdditionalService, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = deleteAdditionalServiceCall(deleteAdditionalService, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -626,6 +724,103 @@ public class EsbOrdersApi {
         }
 
         com.squareup.okhttp.Call call = provideOrderCall(provideOrder, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /* Build call for terminateAdditionalService */
+    private com.squareup.okhttp.Call terminateAdditionalServiceCall(TerminateAdditionalService terminateAdditionalService, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = terminateAdditionalService;
+        
+
+        // create path and map variables
+        String localVarPath = "/orderService/terminateAdditionalService".replaceAll("\\{format\\}","json");
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    /**
+     * Terminate Additional Service
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param terminateAdditionalService Terminate Additional Service (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void terminateAdditionalService(TerminateAdditionalService terminateAdditionalService) throws ApiException {
+        terminateAdditionalServiceWithHttpInfo(terminateAdditionalService);
+    }
+
+    /**
+     * Terminate Additional Service
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param terminateAdditionalService Terminate Additional Service (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> terminateAdditionalServiceWithHttpInfo(TerminateAdditionalService terminateAdditionalService) throws ApiException {
+        com.squareup.okhttp.Call call = terminateAdditionalServiceCall(terminateAdditionalService, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Terminate Additional Service (asynchronously)
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     * @param terminateAdditionalService Terminate Additional Service (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call terminateAdditionalServiceAsync(TerminateAdditionalService terminateAdditionalService, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = terminateAdditionalServiceCall(terminateAdditionalService, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

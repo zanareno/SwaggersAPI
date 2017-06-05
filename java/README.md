@@ -90,11 +90,13 @@ All URIs are relative to *https://virtserver.swaggerhub.com/JoaoFlorindo/Example
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EsbOrdersApi* | [**changeMsisdn**](docs/EsbOrdersApi.md#changeMsisdn) | **PUT** /orderService/changeMsisdn | Update Msisdn
+*EsbOrdersApi* | [**deleteAdditionalService**](docs/EsbOrdersApi.md#deleteAdditionalService) | **DELETE** /orderService/deleteAdditionalService | Delete Additional Service
 *EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
 *EsbOrdersApi* | [**newAccountRelationship**](docs/EsbOrdersApi.md#newAccountRelationship) | **POST** /orderService/newAccountRelationship | Creates new AccountRelationship. A new account to account relationship.
 *EsbOrdersApi* | [**newContact**](docs/EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 *EsbOrdersApi* | [**newCustomer**](docs/EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
 *EsbOrdersApi* | [**provideOrder**](docs/EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Creates new order. An order applies to a single account.
+*EsbOrdersApi* | [**terminateAdditionalService**](docs/EsbOrdersApi.md#terminateAdditionalService) | **PUT** /orderService/terminateAdditionalService | Terminate Additional Service
 
 
 ## Documentation for Models
@@ -113,6 +115,7 @@ Class | Method | HTTP request | Description
  - [OrdersItem](docs/OrdersItem.md)
  - [ProvideOrder](docs/ProvideOrder.md)
  - [SubOrderItems](docs/SubOrderItems.md)
+ - [TerminateAdditionalService](docs/TerminateAdditionalService.md)
 
 
 ## Documentation for Authorization

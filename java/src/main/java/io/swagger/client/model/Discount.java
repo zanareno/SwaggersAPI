@@ -10,7 +10,7 @@ import org.joda.time.LocalDate;
  * An optional discount applied to the charge for the specified period of time.  If not supplied then the standard price in the catalogue is used. 
  */
 @ApiModel(description = "An optional discount applied to the charge for the specified period of time.  If not supplied then the standard price in the catalogue is used. ")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-05T14:58:16.387Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-05T16:13:00.367Z")
 public class Discount {
   @SerializedName("discountValue")
   private Double discountValue = null;

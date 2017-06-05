@@ -6,50 +6,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ChangeMsisdn
+ * TerminateAdditionalService
  */
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-05T16:13:00.367Z")
-public class ChangeMsisdn {
+public class TerminateAdditionalService {
   @SerializedName("msisdn")
   private String msisdn = null;
 
-  @SerializedName("newMsisdn")
-  private String newMsisdn = null;
-
-  public ChangeMsisdn msisdn(String msisdn) {
+  public TerminateAdditionalService msisdn(String msisdn) {
     this.msisdn = msisdn;
     return this;
   }
 
    /**
-   * Get msisdn
+   * The MSISDN of the additional service to be terminated. This must be an additional MSISDN. It does not support supplying the primary MSISDN to terminate the Subscription. 
    * @return msisdn
   **/
-  @ApiModelProperty(example = "66123456789", required = true, value = "")
+  @ApiModelProperty(example = "66123456789", required = true, value = "The MSISDN of the additional service to be terminated. This must be an additional MSISDN. It does not support supplying the primary MSISDN to terminate the Subscription. ")
   public String getMsisdn() {
     return msisdn;
   }
 
   public void setMsisdn(String msisdn) {
     this.msisdn = msisdn;
-  }
-
-  public ChangeMsisdn newMsisdn(String newMsisdn) {
-    this.newMsisdn = newMsisdn;
-    return this;
-  }
-
-   /**
-   * Get newMsisdn
-   * @return newMsisdn
-  **/
-  @ApiModelProperty(example = "66123456790", required = true, value = "")
-  public String getNewMsisdn() {
-    return newMsisdn;
-  }
-
-  public void setNewMsisdn(String newMsisdn) {
-    this.newMsisdn = newMsisdn;
   }
 
 
@@ -61,24 +40,22 @@ public class ChangeMsisdn {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ChangeMsisdn changeMsisdn = (ChangeMsisdn) o;
-    return Objects.equals(this.msisdn, changeMsisdn.msisdn) &&
-        Objects.equals(this.newMsisdn, changeMsisdn.newMsisdn);
+    TerminateAdditionalService terminateAdditionalService = (TerminateAdditionalService) o;
+    return Objects.equals(this.msisdn, terminateAdditionalService.msisdn);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(msisdn, newMsisdn);
+    return Objects.hash(msisdn);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ChangeMsisdn {\n");
+    sb.append("class TerminateAdditionalService {\n");
     
     sb.append("    msisdn: ").append(toIndentedString(msisdn)).append("\n");
-    sb.append("    newMsisdn: ").append(toIndentedString(newMsisdn)).append("\n");
     sb.append("}");
     return sb.toString();
   }

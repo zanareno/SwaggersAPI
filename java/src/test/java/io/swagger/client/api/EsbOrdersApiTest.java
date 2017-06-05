@@ -7,6 +7,7 @@ import io.swagger.client.model.ContactsData;
 import io.swagger.client.model.CustomersData;
 import io.swagger.client.model.NewAccountRelationship;
 import io.swagger.client.model.ProvideOrder;
+import io.swagger.client.model.TerminateAdditionalService;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -34,6 +35,22 @@ public class EsbOrdersApiTest {
     public void changeMsisdnTest() throws ApiException {
         ChangeMsisdn changeMsisdn = null;
         // api.changeMsisdn(changeMsisdn);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Delete Additional Service
+     *
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteAdditionalServiceTest() throws ApiException {
+        TerminateAdditionalService deleteAdditionalService = null;
+        // api.deleteAdditionalService(deleteAdditionalService);
 
         // TODO: test validations
     }
@@ -114,6 +131,22 @@ public class EsbOrdersApiTest {
     public void provideOrderTest() throws ApiException {
         ProvideOrder provideOrder = null;
         // api.provideOrder(provideOrder);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Terminate Additional Service
+     *
+     * Terminate an additional service associationed with a subscription. Does not support terminating the primary service. 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void terminateAdditionalServiceTest() throws ApiException {
+        TerminateAdditionalService terminateAdditionalService = null;
+        // api.terminateAdditionalService(terminateAdditionalService);
 
         // TODO: test validations
     }
