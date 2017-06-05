@@ -71,11 +71,11 @@ public class EsbOrdersApiExample {
     public static void main(String[] args) {
         
         EsbOrdersApi apiInstance = new EsbOrdersApi();
-        AccountsData accountData = new AccountsData(); // AccountsData | Detailed Information of an account
+        ChangeMsisdn changeMsisdn = new ChangeMsisdn(); // ChangeMsisdn | Update Msisdn
         try {
-            apiInstance.newAccount(accountData);
+            apiInstance.changeMsisdn(changeMsisdn);
         } catch (ApiException e) {
-            System.err.println("Exception when calling EsbOrdersApi#newAccount");
+            System.err.println("Exception when calling EsbOrdersApi#changeMsisdn");
             e.printStackTrace();
         }
     }
@@ -89,7 +89,9 @@ All URIs are relative to *https://virtserver.swaggerhub.com/JoaoFlorindo/Example
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*EsbOrdersApi* | [**changeMsisdn**](docs/EsbOrdersApi.md#changeMsisdn) | **PUT** /orderService/changeMsisdn | Update Msisdn
 *EsbOrdersApi* | [**newAccount**](docs/EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
+*EsbOrdersApi* | [**newAccountRelationship**](docs/EsbOrdersApi.md#newAccountRelationship) | **POST** /orderService/newAccountRelationship | Creates new AccountRelationship. A new account to account relationship.
 *EsbOrdersApi* | [**newContact**](docs/EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 *EsbOrdersApi* | [**newCustomer**](docs/EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
 *EsbOrdersApi* | [**provideOrder**](docs/EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Creates new order. An order applies to a single account.
@@ -99,6 +101,7 @@ Class | Method | HTTP request | Description
 
  - [AccountsData](docs/AccountsData.md)
  - [Address](docs/Address.md)
+ - [ChangeMsisdn](docs/ChangeMsisdn.md)
  - [Charge](docs/Charge.md)
  - [ContactAssociation](docs/ContactAssociation.md)
  - [ContactsData](docs/ContactsData.md)
@@ -106,6 +109,7 @@ Class | Method | HTTP request | Description
  - [CustomersData](docs/CustomersData.md)
  - [Discount](docs/Discount.md)
  - [NameSchema](docs/NameSchema.md)
+ - [NewAccountRelationship](docs/NewAccountRelationship.md)
  - [OrdersItem](docs/OrdersItem.md)
  - [ProvideOrder](docs/ProvideOrder.md)
  - [SubOrderItems](docs/SubOrderItems.md)

@@ -11,7 +11,7 @@ import io.swagger.client.model.CustomAttribute;
  * The set of constituent products take make up the top level package product. In Cerillion terms these are options within a package. 
  */
 @ApiModel(description = "The set of constituent products take make up the top level package product. In Cerillion terms these are options within a package. ")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:46:15.664Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-05T14:58:16.387Z")
 public class SubOrderItems {
   @SerializedName("productGroupCode")
   private String productGroupCode = null;

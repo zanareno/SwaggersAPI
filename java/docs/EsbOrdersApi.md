@@ -4,11 +4,57 @@ All URIs are relative to *https://virtserver.swaggerhub.com/JoaoFlorindo/Example
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**changeMsisdn**](EsbOrdersApi.md#changeMsisdn) | **PUT** /orderService/changeMsisdn | Update Msisdn
 [**newAccount**](EsbOrdersApi.md#newAccount) | **POST** /orderService/newAccount | Creates new account
+[**newAccountRelationship**](EsbOrdersApi.md#newAccountRelationship) | **POST** /orderService/newAccountRelationship | Creates new AccountRelationship. A new account to account relationship.
 [**newContact**](EsbOrdersApi.md#newContact) | **POST** /orderService/newContact | Creates new contact
 [**newCustomer**](EsbOrdersApi.md#newCustomer) | **POST** /orderService/newCustomer | Create new customer
 [**provideOrder**](EsbOrdersApi.md#provideOrder) | **POST** /orderService/provideOrder | Creates new order. An order applies to a single account.
 
+
+<a name="changeMsisdn"></a>
+# **changeMsisdn**
+> changeMsisdn(changeMsisdn)
+
+Update Msisdn
+
+Update Msisdn
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.EsbOrdersApi;
+
+
+EsbOrdersApi apiInstance = new EsbOrdersApi();
+ChangeMsisdn changeMsisdn = new ChangeMsisdn(); // ChangeMsisdn | Update Msisdn
+try {
+    apiInstance.changeMsisdn(changeMsisdn);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EsbOrdersApi#changeMsisdn");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeMsisdn** | [**ChangeMsisdn**](ChangeMsisdn.md)| Update Msisdn | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="newAccount"></a>
 # **newAccount**
@@ -40,6 +86,50 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountData** | [**AccountsData**](AccountsData.md)| Detailed Information of an account | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="newAccountRelationship"></a>
+# **newAccountRelationship**
+> newAccountRelationship(newAccountRelationship)
+
+Creates new AccountRelationship. A new account to account relationship.
+
+A relationship is created on Cerillion for each element present in the submission.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.EsbOrdersApi;
+
+
+EsbOrdersApi apiInstance = new EsbOrdersApi();
+NewAccountRelationship newAccountRelationship = new NewAccountRelationship(); // NewAccountRelationship | Detailed Information of a account relationship.
+try {
+    apiInstance.newAccountRelationship(newAccountRelationship);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EsbOrdersApi#newAccountRelationship");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newAccountRelationship** | [**NewAccountRelationship**](NewAccountRelationship.md)| Detailed Information of a account relationship. | [optional]
 
 ### Return type
 

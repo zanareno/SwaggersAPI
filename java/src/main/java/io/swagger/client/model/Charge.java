@@ -10,7 +10,7 @@ import io.swagger.client.model.Discount;
  * Repeating Node  0 to Many  A charge to be associated with the saleable product.
  */
 @ApiModel(description = "Repeating Node  0 to Many  A charge to be associated with the saleable product.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-02T16:46:15.664Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-05T14:58:16.387Z")
 public class Charge {
   @SerializedName("chargeCode")
   private String chargeCode = null;

@@ -2,8 +2,10 @@ package io.swagger.client.api;
 
 import io.swagger.client.ApiException;
 import io.swagger.client.model.AccountsData;
+import io.swagger.client.model.ChangeMsisdn;
 import io.swagger.client.model.ContactsData;
 import io.swagger.client.model.CustomersData;
+import io.swagger.client.model.NewAccountRelationship;
 import io.swagger.client.model.ProvideOrder;
 import org.junit.Test;
 
@@ -21,6 +23,22 @@ public class EsbOrdersApiTest {
 
     
     /**
+     * Update Msisdn
+     *
+     * Update Msisdn
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void changeMsisdnTest() throws ApiException {
+        ChangeMsisdn changeMsisdn = null;
+        // api.changeMsisdn(changeMsisdn);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Creates new account
      *
      * An account is created on Cerillion for each element present in the submission.
@@ -32,6 +50,22 @@ public class EsbOrdersApiTest {
     public void newAccountTest() throws ApiException {
         AccountsData accountData = null;
         // api.newAccount(accountData);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Creates new AccountRelationship. A new account to account relationship.
+     *
+     * A relationship is created on Cerillion for each element present in the submission.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void newAccountRelationshipTest() throws ApiException {
+        NewAccountRelationship newAccountRelationship = null;
+        // api.newAccountRelationship(newAccountRelationship);
 
         // TODO: test validations
     }
