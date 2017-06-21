@@ -328,22 +328,107 @@ paths:
 definitions:
   CatalogDto:
     type: "object"
-    required:
-    - "id"
-    - "name"
-    - "releaseDate"
     properties:
-      id:
+      legacyYN:
         type: "string"
-        format: "uuid"
-        example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
-      name:
+      class:
         type: "string"
-        example: "Widget Adapter"
-      releaseDate:
+      availableYN:
         type: "string"
-        format: "int32"
-        example: "2016-08-29T09:12:33.001Z"
+      country:
+        type: "string"
+      currency:
+        type: "string"
+      catalogue:
+        type: "string"
+      obsolete:
+        type: "string"
+      productLevel:
+        type: "string"
+      prod_type:
+        type: "string"
+      section:
+        type: "string"
+      productAvailable:
+        type: "string"
+      productGroupDefinition:
+        type: "string"
+      packageCode:
+        type: "string"
+      packageDescription:
+        type: "string"
+      packagestringgeType:
+        type: "string"
+      packageCategoryDescription:
+        type: "string"
+      componentGroupCode:
+        type: "string"
+      componentGroupName:
+        type: "string"
+      minimum:
+        type: "integer"
+        format: "int64"
+      maximum:
+        type: "integer"
+        format: "int64"
+      displayOrder:
+        type: "integer"
+        format: "int64"
+      inclusionStatus:
+        type: "string"
+      packageDisplayOrder:
+        type: "integer"
+        format: "int64"
+      packageProductAvailable:
+        type: "string"
+      packageProductGroupDefault:
+        type: "string"
+      productCode:
+        type: "string"
+      productDescription:
+        type: "string"
+      productstringgeType:
+        type: "string"
+      categoryDescription:
+        type: "string"
+      tariffGroupCode:
+        type: "string"
+      tariffGroup:
+        type: "string"
+      tariffVersion:
+        type: "integer"
+        format: "int64"
+      currentSalesVersion:
+        type: "string"
+      obseleteYN:
+        type: "string"
+      minstringgePeriod:
+        type: "integer"
+        format: "int64"
+      minstringgePeriodApplies:
+        type: "string"
+      penaltyApplies:
+        type: "string"
+      gLCode:
+        type: "string"
+      gLCostCode:
+        type: "string"
+      salesAmendable:
+        type: "string"
+      prorate:
+        type: "string"
+      tariffPeriod:
+        type: "integer"
+      period:
+        type: "string"
+      dependantTariffActionCode:
+        type: "string"
+      tariffActionCode:
+        type: "string"
+      nSNOfferId:
+        type: "string"
+      nSNPackageId:
+        type: "string"
   CategoryDto:
     required:
     - "name"
