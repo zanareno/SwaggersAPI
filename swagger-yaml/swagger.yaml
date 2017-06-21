@@ -1,0 +1,477 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a simple API"
+  version: "1.0.0"
+  title: "Simple Inventory API"
+  contact:
+    email: "you@your-company.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "virtserver.swaggerhub.com"
+basePath: "/JoaoFlorindo/Product-catalog/1.0.0"
+tags:
+- name: "search"
+  description: "query product catalog for all related details"
+- name: "export"
+  description: "Operations available to special users"
+schemes:
+- "https"
+paths:
+  /product-catalog/catalogs:
+    get:
+      tags:
+      - "search"
+      summary: "searches catalogs"
+      description: "Retrieves all catalogs in the system\n"
+      operationId: "searchCatalogs"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "skip"
+        in: "query"
+        description: "number of records to skip for pagination"
+        required: false
+        type: "integer"
+        minimum: 0
+        format: "int32"
+      - name: "limit"
+        in: "query"
+        description: "maximum number of records to return"
+        required: false
+        type: "integer"
+        maximum: 50
+        minimum: 0
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CatalogDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/catalog/{id}:
+    get:
+      tags:
+      - "search"
+      summary: "searches for one catalog that corresponds to the provided id"
+      description: "By passing the appropriate id, you can search for one catalog\
+        \ in the system\n"
+      operationId: "searchForCatalog"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired catalog"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CatalogDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/catalog/{id}/export:
+    get:
+      tags:
+      - "export"
+      summary: "exports one catalog that corresponds to the provided id"
+      description: "Ability to export a catalog in bulk for loading in to another\
+        \ system\n"
+      operationId: "exportCatalog"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired catalog"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CatalogDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/categories:
+    get:
+      tags:
+      - "search"
+      summary: "searches categories"
+      description: "Retrieves all categories in the system\n"
+      operationId: "searchCategories"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "skip"
+        in: "query"
+        description: "number of records to skip for pagination"
+        required: false
+        type: "integer"
+        minimum: 0
+        format: "int32"
+      - name: "limit"
+        in: "query"
+        description: "maximum number of records to return"
+        required: false
+        type: "integer"
+        maximum: 50
+        minimum: 0
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CategoryDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/category/{id}:
+    get:
+      tags:
+      - "search"
+      summary: "searches for one category that corresponds to the provided id"
+      description: "By passing the appropriate id, you can search for one category\
+        \ in the system\n"
+      operationId: "searchForCategory"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired category"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/CategoryDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/catalog/{id}/products:
+    get:
+      tags:
+      - "search"
+      summary: "Retrieves all products of provided catalog id"
+      description: "By passing the appropriate catalog id, you can get all products\
+        \ in the system of this catalog\n"
+      operationId: "searchProductsByCatalog"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired catalog"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "skip"
+        in: "query"
+        description: "number of records to skip for pagination"
+        required: false
+        type: "integer"
+        minimum: 0
+        format: "int32"
+      - name: "limit"
+        in: "query"
+        description: "maximum number of records to return"
+        required: false
+        type: "integer"
+        maximum: 50
+        minimum: 0
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ProductDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/category/{id}/products:
+    get:
+      tags:
+      - "search"
+      summary: "searches for products of provided category id"
+      description: "By passing the appropriate category id, you can get all products\
+        \ in the system of this category\n"
+      operationId: "searchProductsByCategory"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired category"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "skip"
+        in: "query"
+        description: "number of records to skip for pagination"
+        required: false
+        type: "integer"
+        minimum: 0
+        format: "int32"
+      - name: "limit"
+        in: "query"
+        description: "maximum number of records to return"
+        required: false
+        type: "integer"
+        maximum: 50
+        minimum: 0
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ProductDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/product/{id}:
+    get:
+      tags:
+      - "search"
+      summary: "retrieves the product details of provided product id"
+      description: "By passing the appropriate product id, you can get product details\
+        \ \n"
+      operationId: "getProductDetailsById"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id of the desired catalog"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ProductDto"
+        400:
+          description: "bad input parameter"
+  /product-catalog/rates:
+    get:
+      tags:
+      - "search"
+      summary: "retrieves rates according provided filters"
+      description: "By passing the appropriate product id, you can get product details\
+        \ \n"
+      operationId: "getRates"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "planId"
+        in: "query"
+        description: "retrieves rates according parametrized plan id"
+        required: false
+        type: "integer"
+        format: "int32"
+      - name: "contry"
+        in: "query"
+        description: "retrieves rates according parametrized contry id"
+        required: false
+        type: "integer"
+        format: "int32"
+      - name: "eventType"
+        in: "query"
+        description: "retrieves rates according parametrized eventType"
+        required: false
+        type: "string"
+      - name: "skip"
+        in: "query"
+        description: "number of records to skip for pagination"
+        required: false
+        type: "integer"
+        minimum: 0
+        format: "int32"
+      - name: "limit"
+        in: "query"
+        description: "maximum number of records to return"
+        required: false
+        type: "integer"
+        maximum: 50
+        minimum: 0
+        format: "int32"
+      responses:
+        200:
+          description: "search results matching criteria"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/ProductDto"
+        400:
+          description: "bad input parameter"
+definitions:
+  CatalogDto:
+    type: "object"
+    required:
+    - "id"
+    - "name"
+    - "releaseDate"
+    properties:
+      id:
+        type: "string"
+        format: "uuid"
+        example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+      name:
+        type: "string"
+        example: "Widget Adapter"
+      releaseDate:
+        type: "string"
+        format: "int32"
+        example: "2016-08-29T09:12:33.001Z"
+  CategoryDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      phone:
+        type: "string"
+        example: "408-867-5309"
+  ProductDto:
+    required:
+    - "code"
+    - "country"
+    - "currency"
+    - "description"
+    - "groupCode"
+    - "groupDescription"
+    properties:
+      code:
+        type: "string"
+        example: "S09CM10"
+      description:
+        type: "string"
+        example: "Add-on North American Weekly SMS"
+      groupCode:
+        type: "string"
+        example: "POAB"
+      groupDescription:
+        type: "string"
+        example: "Postpaid Addon Bundle"
+      country:
+        type: "string"
+        example: "HK"
+      currency:
+        type: "string"
+        example: "HKD"
+      price:
+        $ref: "#/definitions/PriceDto"
+      term:
+        $ref: "#/definitions/ContractTermDto"
+      serviceSpecification:
+        $ref: "#/definitions/ServiceSpecificationDto"
+      resourceSpecification:
+        $ref: "#/definitions/ResourceSpecifiacionDto"
+  PriceDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      phone:
+        type: "string"
+        example: "408-867-5309"
+  ContractTermDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      phone:
+        type: "string"
+        example: "408-867-5309"
+  ServiceSpecificationDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      balanceDefinition:
+        $ref: "#/definitions/BalanceDto"
+  BalanceDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      phone:
+        type: "string"
+        example: "408-867-5309"
+  ResourceSpecifiacionDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      sim:
+        $ref: "#/definitions/SimDto"
+  SimDto:
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+        example: "ACME Corporation"
+      homePage:
+        type: "string"
+        format: "url"
+        example: "https://www.acme-corp.com"
+      phone:
+        type: "string"
+        example: "408-867-5309"
