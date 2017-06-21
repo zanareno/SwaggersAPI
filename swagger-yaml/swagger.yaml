@@ -402,6 +402,9 @@ definitions:
         type: "string"
       obseleteYN:
         type: "string"
+      tariffstringge:
+        type: "number"
+        format: "float"
       minstringgePeriod:
         type: "integer"
         format: "int64"
@@ -419,6 +422,7 @@ definitions:
         type: "string"
       tariffPeriod:
         type: "integer"
+        format: "int64"
       period:
         type: "string"
       dependantTariffActionCode:
