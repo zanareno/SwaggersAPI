@@ -345,7 +345,7 @@ definitions:
         type: "string"
       productLevel:
         type: "string"
-      prod_type:
+      prodType:
         type: "string"
       section:
         type: "string"
@@ -357,7 +357,7 @@ definitions:
         type: "string"
       packageDescription:
         type: "string"
-      packagestringgeType:
+      packageStringgeType:
         type: "string"
       packageCategoryDescription:
         type: "string"
@@ -435,18 +435,11 @@ definitions:
         type: "string"
   CategoryDto:
     required:
-    - "name"
+    - "description"
     properties:
-      name:
+      description:
         type: "string"
-        example: "ACME Corporation"
-      homePage:
-        type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
-      phone:
-        type: "string"
-        example: "408-867-5309"
+        example: "12 Month Contract Charge"
   ProductDto:
     required:
     - "code"
@@ -474,6 +467,9 @@ definitions:
       currency:
         type: "string"
         example: "HKD"
+      nSNOfferID:
+        type: "string"
+        example: "HK_B2BPost_HKD"
       price:
         $ref: "#/definitions/PriceDto"
       term:
@@ -498,11 +494,12 @@ definitions:
         example: "408-867-5309"
   ContractTermDto:
     required:
-    - "name"
+    - "period"
     properties:
-      name:
-        type: "string"
-        example: "ACME Corporation"
+      period:
+        type: "integer"
+        format: "int32"
+        example: 30
       homePage:
         type: "string"
         format: "url"
@@ -522,21 +519,24 @@ definitions:
         format: "url"
         example: "https://www.acme-corp.com"
       balanceDefinition:
-        $ref: "#/definitions/BalanceDto"
-  BalanceDto:
+        $ref: "#/definitions/ProductAllowanceDto"
+  ProductAllowanceDto:
     required:
+    - "allowanceUnit"
+    - "allowanceValue"
     - "name"
     properties:
       name:
         type: "string"
-        example: "ACME Corporation"
-      homePage:
+        example: "100MB"
+      allowanceValue:
+        type: "integer"
+        format: "int32"
+        example: 100
+      allowanceUnit:
         type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
-      phone:
-        type: "string"
-        example: "408-867-5309"
+        example: "MB"
+        description: "Pickvalue (MB, GB)"
   ResourceSpecifiacionDto:
     required:
     - "name"
