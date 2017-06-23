@@ -19,7 +19,7 @@ tags:
 schemes:
 - "https"
 paths:
-  /product-catalog/catalogs:
+  /catalogs:
     get:
       tags:
       - "search"
@@ -53,7 +53,7 @@ paths:
               $ref: "#/definitions/CatalogDto"
         400:
           description: "bad input parameter"
-  /product-catalog/catalog/{id}:
+  /catalog/{id}:
     get:
       tags:
       - "search"
@@ -105,7 +105,7 @@ paths:
               $ref: "#/definitions/CatalogDto"
         400:
           description: "bad input parameter"
-  /product-catalog/categories:
+  /categories:
     get:
       tags:
       - "search"
@@ -139,7 +139,7 @@ paths:
               $ref: "#/definitions/CategoryDto"
         400:
           description: "bad input parameter"
-  /product-catalog/category/{id}:
+  /category/{id}:
     get:
       tags:
       - "search"
@@ -165,7 +165,7 @@ paths:
               $ref: "#/definitions/CategoryDto"
         400:
           description: "bad input parameter"
-  /product-catalog/catalog/{id}/products:
+  /catalog/{id}/products:
     get:
       tags:
       - "search"
@@ -206,7 +206,7 @@ paths:
               $ref: "#/definitions/ProductDto"
         400:
           description: "bad input parameter"
-  /product-catalog/category/{id}/products:
+  /category/{id}/products:
     get:
       tags:
       - "search"
