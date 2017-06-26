@@ -53,7 +53,7 @@ paths:
               $ref: "#/definitions/CatalogDto"
         400:
           description: "bad input parameter"
-  /catalog/{id}:
+  /catalogs/{id}:
     get:
       tags:
       - "search"
@@ -79,7 +79,7 @@ paths:
               $ref: "#/definitions/CatalogDto"
         400:
           description: "bad input parameter"
-  /product-catalog/catalog/{id}/export:
+  /catalogs/{id}/export:
     get:
       tags:
       - "export"
@@ -139,7 +139,7 @@ paths:
               $ref: "#/definitions/CategoryDto"
         400:
           description: "bad input parameter"
-  /category/{id}:
+  /categories/{id}:
     get:
       tags:
       - "search"
@@ -165,7 +165,7 @@ paths:
               $ref: "#/definitions/CategoryDto"
         400:
           description: "bad input parameter"
-  /catalog/{id}/products:
+  /catalogs/{id}/products:
     get:
       tags:
       - "search"
@@ -206,7 +206,7 @@ paths:
               $ref: "#/definitions/ProductDto"
         400:
           description: "bad input parameter"
-  /category/{id}/products:
+  /categories/{id}/products:
     get:
       tags:
       - "search"
@@ -247,7 +247,7 @@ paths:
               $ref: "#/definitions/ProductDto"
         400:
           description: "bad input parameter"
-  /product-catalog/product/{id}:
+  /products/{id}:
     get:
       tags:
       - "search"
@@ -273,7 +273,7 @@ paths:
               $ref: "#/definitions/ProductDto"
         400:
           description: "bad input parameter"
-  /product-catalog/rates:
+  /rates:
     get:
       tags:
       - "search"
@@ -480,33 +480,33 @@ definitions:
         $ref: "#/definitions/ResourceSpecifiacionDto"
   PriceDto:
     required:
-    - "name"
+    - "code"
+    - "value"
     properties:
-      name:
+      code:
         type: "string"
-        example: "ACME Corporation"
-      homePage:
-        type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
-      phone:
-        type: "string"
-        example: "408-867-5309"
+        example: "PC-0012"
+      value:
+        type: "integer"
+        format: "int64"
+        example: 100
   ContractTermDto:
     required:
+    - "autoRenew"
     - "period"
+    - "startDate"
     properties:
       period:
         type: "integer"
         format: "int32"
         example: 30
-      homePage:
-        type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
-      phone:
-        type: "string"
-        example: "408-867-5309"
+      autoRenew:
+        type: "boolean"
+        example: false
+      startDate:
+        type: "integer"
+        format: "date"
+        example: 20170101
   ServiceSpecificationDto:
     required:
     - "name"
@@ -539,28 +539,25 @@ definitions:
         description: "Pickvalue (MB, GB)"
   ResourceSpecifiacionDto:
     required:
+    - "code"
     - "name"
     properties:
+      code:
+        type: "string"
+        example: "RS-00012"
       name:
         type: "string"
-        example: "ACME Corporation"
-      homePage:
-        type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
+        example: "Something"
       sim:
         $ref: "#/definitions/SimDto"
   SimDto:
     required:
-    - "name"
+    - "imsi"
+    - "msisdn"
     properties:
-      name:
+      msisdn:
         type: "string"
-        example: "ACME Corporation"
-      homePage:
+        example: "919961345678"
+      imsi:
         type: "string"
-        format: "url"
-        example: "https://www.acme-corp.com"
-      phone:
-        type: "string"
-        example: "408-867-5309"
+        example: "410072821393853"
